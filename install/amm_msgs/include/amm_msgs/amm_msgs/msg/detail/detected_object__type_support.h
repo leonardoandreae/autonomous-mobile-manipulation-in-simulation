@@ -1,0 +1,1 @@
+/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/amm_msgs/rosidl_generator_c/amm_msgs/msg/detail/detected_object__type_support.h

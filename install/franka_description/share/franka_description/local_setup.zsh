@@ -1,0 +1,1 @@
+/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/franka_description/ament_cmake_environment_hooks/local_setup.zsh

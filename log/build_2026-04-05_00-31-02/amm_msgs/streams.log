@@ -1,0 +1,287 @@
+[0.027s] Invoking command in '/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/amm_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/leonardo/ros2_ws/install/mirte_test:/home/leonardo/ros2_ws/install/launch_testing_examples:/home/leonardo/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_service:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_publisher:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_client:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_action_server:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_action_client:/home/leonardo/ros2_ws/install/examples_rclpy_guard_conditions:/home/leonardo/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/amm_msgs -- -j8 -l8
+[0.090s] [  1%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[0.101s] [  1%] Built target ament_cmake_python_symlink_amm_msgs
+[0.422s] running egg_info
+[0.423s] creating amm_msgs.egg-info
+[0.451s] writing amm_msgs.egg-info/PKG-INFO
+[0.451s] writing dependency_links to amm_msgs.egg-info/dependency_links.txt
+[0.451s] writing top-level names to amm_msgs.egg-info/top_level.txt
+[0.451s] writing manifest file 'amm_msgs.egg-info/SOURCES.txt'
+[0.539s] reading manifest file 'amm_msgs.egg-info/SOURCES.txt'
+[0.539s] writing manifest file 'amm_msgs.egg-info/SOURCES.txt'
+[0.571s] [  1%] Built target ament_cmake_python_build_amm_msgs_egg
+[0.633s] [  1%] Built target amm_msgs__rosidl_generator_type_description
+[0.647s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[0.660s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.067s] [  4%] Built target amm_msgs__cpp
+[2.109s] [  6%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_generator_c.dir/rosidl_generator_c/amm_msgs/msg/detail/task_command__functions.c.o[0m
+[2.109s] [  6%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_generator_c.dir/rosidl_generator_c/amm_msgs/msg/detail/detected_object__functions.c.o[0m
+[2.109s] [  8%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_generator_c.dir/rosidl_generator_c/amm_msgs/action/detail/execute_task__functions.c.o[0m
+[2.109s] [  9%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_generator_c.dir/rosidl_generator_c/amm_msgs/action/detail/execute_task__description.c.o[0m
+[2.109s] [ 10%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_generator_c.dir/rosidl_generator_c/amm_msgs/msg/detail/detected_object__description.c.o[0m
+[2.110s] [ 12%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_generator_c.dir/rosidl_generator_c/amm_msgs/msg/detail/task_command__type_support.c.o[0m
+[2.115s] [ 13%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_generator_c.dir/rosidl_generator_c/amm_msgs/msg/detail/task_command__description.c.o[0m
+[2.120s] [ 14%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_generator_c.dir/rosidl_generator_c/amm_msgs/msg/detail/detected_object__type_support.c.o[0m
+[2.168s] [ 16%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_generator_c.dir/rosidl_generator_c/amm_msgs/action/detail/execute_task__type_support.c.o[0m
+[2.195s] [ 17%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_generator_c.dir/rosidl_generator_c/amm_msgs/action/detail/pick_object__description.c.o[0m
+[2.215s] [ 18%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_generator_c.dir/rosidl_generator_c/amm_msgs/action/detail/pick_object__type_support.c.o[0m
+[2.217s] [ 20%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_generator_c.dir/rosidl_generator_c/amm_msgs/action/detail/pick_object__functions.c.o[0m
+[2.224s] [ 21%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_generator_c.dir/rosidl_generator_c/amm_msgs/action/detail/place_object__description.c.o[0m
+[2.224s] [ 22%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_generator_c.dir/rosidl_generator_c/amm_msgs/action/detail/place_object__functions.c.o[0m
+[2.254s] [ 24%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_generator_c.dir/rosidl_generator_c/amm_msgs/action/detail/place_object__type_support.c.o[0m
+[2.470s] [ 25%] [32m[1mLinking C shared library libamm_msgs__rosidl_generator_c.so[0m
+[2.532s] [ 25%] Built target amm_msgs__rosidl_generator_c
+[2.552s] [ 31%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.552s] [ 31%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.553s] [ 31%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.553s] [ 32%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.553s] [ 33%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.553s] [ 33%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[3.969s] [ 35%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/amm_msgs/msg/task_command__type_support.cpp.o[0m
+[3.976s] [ 36%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/amm_msgs/action/execute_task__type_support.cpp.o[0m
+[3.979s] [ 37%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/amm_msgs/msg/detected_object__type_support.cpp.o[0m
+[4.025s] [ 39%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/amm_msgs/msg/task_command__type_support.cpp.o[0m
+[4.188s] [ 40%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/amm_msgs/msg/detected_object__type_support.cpp.o[0m
+[4.285s] [ 41%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/amm_msgs/action/execute_task__type_support.cpp.o[0m
+[4.493s] [ 43%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/amm_msgs/msg/detail/task_command__type_support.cpp.o[0m
+[4.497s] [ 44%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/amm_msgs/action/pick_object__type_support.cpp.o[0m
+[4.754s] [ 45%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/amm_msgs/action/pick_object__type_support.cpp.o[0m
+[4.767s] [ 47%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/amm_msgs/action/place_object__type_support.cpp.o[0m
+[4.824s] [ 48%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/amm_msgs/msg/detail/detected_object__type_support.cpp.o[0m
+[5.039s] [ 50%] [32m[1mLinking CXX shared library libamm_msgs__rosidl_typesupport_c.so[0m
+[5.114s] [ 51%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/amm_msgs/msg/detail/task_command__type_support.c.o[0m
+[5.215s] [ 51%] Built target amm_msgs__rosidl_typesupport_c
+[5.255s] [ 52%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/amm_msgs/action/place_object__type_support.cpp.o[0m
+[5.283s] [ 54%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/amm_msgs/msg/detail/detected_object__type_support.c.o[0m
+[5.443s] [ 55%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/amm_msgs/action/detail/execute_task__type_support.c.o[0m
+[5.471s] [ 56%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/amm_msgs/action/detail/pick_object__type_support.c.o[0m
+[5.705s] [ 58%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/amm_msgs/action/detail/execute_task__type_support.cpp.o[0m
+[5.730s] [ 59%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/amm_msgs/action/detail/pick_object__type_support.cpp.o[0m
+[5.736s] [ 60%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/amm_msgs/action/detail/place_object__type_support.c.o[0m
+[5.767s] [ 62%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/amm_msgs/msg/detail/dds_fastrtps/task_command__type_support.cpp.o[0m
+[5.900s] [ 63%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/amm_msgs/msg/detail/dds_fastrtps/detected_object__type_support.cpp.o[0m
+[5.939s] [ 64%] [32m[1mLinking C shared library libamm_msgs__rosidl_typesupport_introspection_c.so[0m
+[6.068s] [ 64%] Built target amm_msgs__rosidl_typesupport_introspection_c
+[6.100s] [ 66%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/amm_msgs/action/detail/dds_fastrtps/execute_task__type_support.cpp.o[0m
+[6.270s] [ 67%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/amm_msgs/msg/detail/task_command__type_support_c.cpp.o[0m
+[6.350s] [ 68%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/amm_msgs/action/detail/dds_fastrtps/pick_object__type_support.cpp.o[0m
+[6.985s] [ 70%] [32m[1mLinking CXX shared library libamm_msgs__rosidl_typesupport_cpp.so[0m
+[7.233s] [ 71%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/amm_msgs/action/detail/dds_fastrtps/place_object__type_support.cpp.o[0m
+[7.271s] [ 71%] Built target amm_msgs__rosidl_typesupport_cpp
+[7.305s] [ 72%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/amm_msgs/action/detail/place_object__type_support.cpp.o[0m
+[7.444s] [ 74%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/amm_msgs/msg/detail/detected_object__type_support_c.cpp.o[0m
+[7.471s] [ 75%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/amm_msgs/action/detail/execute_task__type_support_c.cpp.o[0m
+[7.551s] [ 77%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/amm_msgs/action/detail/pick_object__type_support_c.cpp.o[0m
+[8.412s] [ 78%] [32mBuilding CXX object CMakeFiles/amm_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/amm_msgs/action/detail/place_object__type_support_c.cpp.o[0m
+[9.345s] [ 79%] [32m[1mLinking CXX shared library libamm_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[9.397s] [ 81%] [32m[1mLinking CXX shared library libamm_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[9.537s] [ 81%] Built target amm_msgs__rosidl_typesupport_introspection_cpp
+[9.544s] [ 81%] Built target amm_msgs__rosidl_typesupport_fastrtps_cpp
+[9.655s] [ 82%] [32m[1mLinking CXX shared library libamm_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[9.793s] [ 82%] Built target amm_msgs__rosidl_typesupport_fastrtps_c
+[9.827s] [ 82%] Built target amm_msgs
+[9.855s] [ 83%] [34m[1mGenerating Python code for ROS interfaces[0m
+[12.083s] [ 83%] Built target amm_msgs__py
+[12.109s] [ 85%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_generator_py.dir/rosidl_generator_py/amm_msgs/msg/_task_command_s.c.o[0m
+[12.112s] [ 89%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_generator_py.dir/rosidl_generator_py/amm_msgs/action/_execute_task_s.c.o[0m
+[12.112s] [ 89%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_generator_py.dir/rosidl_generator_py/amm_msgs/msg/_detected_object_s.c.o[0m
+[12.113s] [ 89%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_generator_py.dir/rosidl_generator_py/amm_msgs/action/_pick_object_s.c.o[0m
+[12.113s] [ 90%] [32mBuilding C object CMakeFiles/amm_msgs__rosidl_generator_py.dir/rosidl_generator_py/amm_msgs/action/_place_object_s.c.o[0m
+[12.452s] [ 91%] [32m[1mLinking C shared library libamm_msgs__rosidl_generator_py.so[0m
+[12.519s] [ 91%] Built target amm_msgs__rosidl_generator_py
+[12.544s] [ 94%] [32mBuilding C object CMakeFiles/amm_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/amm_msgs/_amm_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[12.544s] [ 94%] [32mBuilding C object CMakeFiles/amm_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/amm_msgs/_amm_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[12.546s] [ 95%] [32mBuilding C object CMakeFiles/amm_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/amm_msgs/_amm_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[12.780s] [ 97%] [32m[1mLinking C shared module rosidl_generator_py/amm_msgs/amm_msgs_s__rosidl_typesupport_c.so[0m
+[12.781s] [ 98%] [32m[1mLinking C shared module rosidl_generator_py/amm_msgs/amm_msgs_s__rosidl_typesupport_introspection_c.so[0m
+[12.789s] [100%] [32m[1mLinking C shared module rosidl_generator_py/amm_msgs/amm_msgs_s__rosidl_typesupport_fastrtps_c.so[0m
+[12.824s] [100%] Built target amm_msgs_s__rosidl_typesupport_c
+[12.826s] [100%] Built target amm_msgs_s__rosidl_typesupport_introspection_c
+[12.834s] [100%] Built target amm_msgs_s__rosidl_typesupport_fastrtps_c
+[12.849s] Invoked command in '/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/amm_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/leonardo/ros2_ws/install/mirte_test:/home/leonardo/ros2_ws/install/launch_testing_examples:/home/leonardo/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_service:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_publisher:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_client:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_action_server:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_action_client:/home/leonardo/ros2_ws/install/examples_rclpy_guard_conditions:/home/leonardo/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/amm_msgs -- -j8 -l8
+[12.851s] Invoking command in '/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/amm_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/leonardo/ros2_ws/install/mirte_test:/home/leonardo/ros2_ws/install/launch_testing_examples:/home/leonardo/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_service:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_publisher:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_client:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_action_server:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_action_client:/home/leonardo/ros2_ws/install/examples_rclpy_guard_conditions:/home/leonardo/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/amm_msgs
+[12.862s] -- Install configuration: ""
+[12.863s] -- Execute custom install script
+[12.863s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/ament_index/resource_index/rosidl_interfaces/amm_msgs
+[12.875s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/msg/TaskCommand.json
+[12.887s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/msg/DetectedObject.json
+[12.898s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/action/ExecuteTask.json
+[12.909s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/action/PickObject.json
+[12.920s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/action/PlaceObject.json
+[12.932s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/execute_task__functions.h
+[12.943s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/execute_task__struct.h
+[12.954s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/execute_task__type_support.h
+[12.965s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/pick_object__functions.h
+[12.976s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/pick_object__struct.h
+[12.987s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/pick_object__type_support.h
+[12.998s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/place_object__functions.h
+[13.009s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/place_object__struct.h
+[13.020s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/place_object__type_support.h
+[13.032s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/execute_task.h
+[13.044s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/pick_object.h
+[13.056s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/place_object.h
+[13.070s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detail/detected_object__functions.h
+[13.081s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detail/detected_object__struct.h
+[13.093s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detail/detected_object__type_support.h
+[13.104s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detail/task_command__functions.h
+[13.115s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detail/task_command__struct.h
+[13.126s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detail/task_command__type_support.h
+[13.137s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detected_object.h
+[13.147s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/rosidl_generator_c__visibility_control.h
+[13.158s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/task_command.h
+[13.169s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/environment/library_path.sh
+[13.180s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/environment/library_path.dsv
+[13.191s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/execute_task__rosidl_typesupport_fastrtps_c.h
+[13.202s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/pick_object__rosidl_typesupport_fastrtps_c.h
+[13.212s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/place_object__rosidl_typesupport_fastrtps_c.h
+[13.223s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detail/detected_object__rosidl_typesupport_fastrtps_c.h
+[13.233s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detail/task_command__rosidl_typesupport_fastrtps_c.h
+[13.243s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[13.254s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/execute_task__rosidl_typesupport_introspection_c.h
+[13.265s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/pick_object__rosidl_typesupport_introspection_c.h
+[13.275s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/place_object__rosidl_typesupport_introspection_c.h
+[13.285s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detail/detected_object__rosidl_typesupport_introspection_c.h
+[13.296s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detail/task_command__rosidl_typesupport_introspection_c.h
+[13.306s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[13.317s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/execute_task__builder.hpp
+[13.328s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/execute_task__struct.hpp
+[13.339s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/execute_task__traits.hpp
+[13.349s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/execute_task__type_support.hpp
+[13.360s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/pick_object__builder.hpp
+[13.370s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/pick_object__struct.hpp
+[13.380s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/pick_object__traits.hpp
+[13.391s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/pick_object__type_support.hpp
+[13.401s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/place_object__builder.hpp
+[13.412s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/place_object__struct.hpp
+[13.422s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/place_object__traits.hpp
+[13.433s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/place_object__type_support.hpp
+[13.443s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/execute_task.hpp
+[13.453s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/pick_object.hpp
+[13.464s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/place_object.hpp
+[13.474s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detail/detected_object__builder.hpp
+[13.485s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detail/detected_object__struct.hpp
+[13.496s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detail/detected_object__traits.hpp
+[13.506s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detail/detected_object__type_support.hpp
+[13.517s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detail/task_command__builder.hpp
+[13.527s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detail/task_command__struct.hpp
+[13.538s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detail/task_command__traits.hpp
+[13.548s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detail/task_command__type_support.hpp
+[13.559s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detected_object.hpp
+[13.570s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[13.582s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/task_command.hpp
+[13.594s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/execute_task__rosidl_typesupport_fastrtps_cpp.hpp
+[13.606s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/pick_object__rosidl_typesupport_fastrtps_cpp.hpp
+[13.616s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/place_object__rosidl_typesupport_fastrtps_cpp.hpp
+[13.628s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detail/detected_object__rosidl_typesupport_fastrtps_cpp.hpp
+[13.639s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detail/task_command__rosidl_typesupport_fastrtps_cpp.hpp
+[13.649s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[13.660s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/execute_task__rosidl_typesupport_introspection_cpp.hpp
+[13.671s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/pick_object__rosidl_typesupport_introspection_cpp.hpp
+[13.682s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/action/detail/place_object__rosidl_typesupport_introspection_cpp.hpp
+[13.693s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detail/detected_object__rosidl_typesupport_introspection_cpp.hpp
+[13.703s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/include/amm_msgs/amm_msgs/msg/detail/task_command__rosidl_typesupport_introspection_cpp.hpp
+[13.714s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/environment/pythonpath.sh
+[13.725s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/environment/pythonpath.dsv
+[13.736s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs-0.1.0-py3.12.egg-info/PKG-INFO
+[13.747s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs-0.1.0-py3.12.egg-info/SOURCES.txt
+[13.758s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs-0.1.0-py3.12.egg-info/dependency_links.txt
+[13.769s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs-0.1.0-py3.12.egg-info/top_level.txt
+[13.780s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/__init__.py
+[13.791s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/_amm_msgs_s.ep.rosidl_typesupport_c.c
+[13.802s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/_amm_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[13.813s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/_amm_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[13.825s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/action/__init__.py
+[13.837s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/action/_execute_task.py
+[13.849s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/action/_execute_task_s.c
+[13.861s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/action/_pick_object.py
+[13.873s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/action/_pick_object_s.c
+[13.884s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/action/_place_object.py
+[13.897s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/action/_place_object_s.c
+[13.909s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/amm_msgs_s__rosidl_typesupport_c.so
+[13.920s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/amm_msgs_s__rosidl_typesupport_fastrtps_c.so
+[13.932s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/amm_msgs_s__rosidl_typesupport_introspection_c.so
+[13.944s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/msg/__init__.py
+[13.957s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/msg/_detected_object.py
+[13.969s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/msg/_detected_object_s.c
+[13.980s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/msg/_task_command.py
+[13.992s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/msg/_task_command_s.c
+[14.009s] -- Up-to-date symlink: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/amm_msgs_s__rosidl_typesupport_fastrtps_c.so
+[14.010s] -- Up-to-date symlink: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/amm_msgs_s__rosidl_typesupport_introspection_c.so
+[14.010s] -- Up-to-date symlink: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/amm_msgs_s__rosidl_typesupport_c.so
+[14.011s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/msg/TaskCommand.idl
+[14.022s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/msg/DetectedObject.idl
+[14.034s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/action/ExecuteTask.idl
+[14.046s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/action/PickObject.idl
+[14.057s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/action/PlaceObject.idl
+[14.069s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/msg/TaskCommand.msg
+[14.081s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/msg/DetectedObject.msg
+[14.092s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/action/ExecuteTask.action
+[14.104s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/action/PickObject.action
+[14.116s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/action/PlaceObject.action
+[14.128s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/ament_index/resource_index/package_run_dependencies/amm_msgs
+[14.139s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/ament_index/resource_index/parent_prefix_path/amm_msgs
+[14.151s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/environment/ament_prefix_path.sh
+[14.162s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/environment/ament_prefix_path.dsv
+[14.174s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/environment/path.sh
+[14.185s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/environment/path.dsv
+[14.197s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/local_setup.bash
+[14.208s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/local_setup.sh
+[14.220s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/local_setup.zsh
+[14.231s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/local_setup.dsv
+[14.242s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/package.dsv
+[14.253s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/ament_index/resource_index/packages/amm_msgs
+[14.264s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/rosidl_cmake-extras.cmake
+[14.275s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[14.286s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[14.298s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[14.309s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[14.320s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[14.331s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[14.342s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/amm_msgsConfig.cmake
+[14.353s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/amm_msgsConfig-version.cmake
+[14.364s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/package.xml
+[14.375s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/libamm_msgs__rosidl_generator_c.so
+[14.376s] -- Set non-toolchain portion of runtime path of "/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/libamm_msgs__rosidl_generator_c.so" to ""
+[14.376s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/libamm_msgs__rosidl_typesupport_fastrtps_c.so
+[14.377s] -- Set non-toolchain portion of runtime path of "/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/libamm_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[14.377s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/libamm_msgs__rosidl_typesupport_introspection_c.so
+[14.377s] -- Set non-toolchain portion of runtime path of "/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/libamm_msgs__rosidl_typesupport_introspection_c.so" to ""
+[14.377s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/libamm_msgs__rosidl_typesupport_c.so
+[14.378s] -- Set non-toolchain portion of runtime path of "/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/libamm_msgs__rosidl_typesupport_c.so" to ""
+[14.378s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/libamm_msgs__rosidl_typesupport_fastrtps_cpp.so
+[14.379s] -- Set non-toolchain portion of runtime path of "/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/libamm_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[14.379s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/libamm_msgs__rosidl_typesupport_introspection_cpp.so
+[14.380s] -- Set non-toolchain portion of runtime path of "/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/libamm_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[14.380s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/libamm_msgs__rosidl_typesupport_cpp.so
+[14.381s] -- Set non-toolchain portion of runtime path of "/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/libamm_msgs__rosidl_typesupport_cpp.so" to ""
+[14.463s] Listing '/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs'...
+[14.463s] Compiling '/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/__init__.py'...
+[14.463s] Listing '/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/action'...
+[14.463s] Compiling '/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/action/__init__.py'...
+[14.463s] Compiling '/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/action/_execute_task.py'...
+[14.463s] Compiling '/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/action/_pick_object.py'...
+[14.463s] Compiling '/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/action/_place_object.py'...
+[14.464s] Listing '/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/msg'...
+[14.464s] Compiling '/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/msg/__init__.py'...
+[14.464s] Compiling '/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/msg/_detected_object.py'...
+[14.464s] Compiling '/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/python3.12/site-packages/amm_msgs/msg/_task_command.py'...
+[14.469s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/libamm_msgs__rosidl_generator_py.so
+[14.469s] -- Set non-toolchain portion of runtime path of "/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/lib/libamm_msgs__rosidl_generator_py.so" to ""
+[14.469s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/export_amm_msgs__rosidl_generator_cExport.cmake
+[14.470s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/export_amm_msgs__rosidl_generator_cExport-noconfig.cmake
+[14.470s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/export_amm_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[14.470s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/export_amm_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[14.471s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/amm_msgs__rosidl_typesupport_introspection_cExport.cmake
+[14.471s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/amm_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[14.471s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/amm_msgs__rosidl_typesupport_cExport.cmake
+[14.472s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/amm_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[14.472s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/export_amm_msgs__rosidl_generator_cppExport.cmake
+[14.472s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/export_amm_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[14.473s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/export_amm_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[14.473s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/amm_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[14.473s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/amm_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[14.474s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/amm_msgs__rosidl_typesupport_cppExport.cmake
+[14.474s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/amm_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[14.474s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/export_amm_msgs__rosidl_generator_pyExport.cmake
+[14.475s] -- Installing: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake/export_amm_msgs__rosidl_generator_pyExport-noconfig.cmake
+[14.477s] Invoked command in '/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/amm_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/leonardo/ros2_ws/install/mirte_test:/home/leonardo/ros2_ws/install/launch_testing_examples:/home/leonardo/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_service:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_publisher:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_client:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_action_server:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_action_client:/home/leonardo/ros2_ws/install/examples_rclpy_guard_conditions:/home/leonardo/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/amm_msgs

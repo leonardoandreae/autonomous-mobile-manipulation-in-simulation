@@ -1,0 +1,20 @@
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_gazebo/share/amm_gazebo/worlds/three_room.sdf
+-- Up-to-date symlink: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_gazebo/share/amm_gazebo/launch/gazebo_sim.launch.py
+-- Up-to-date symlink: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_gazebo/share/amm_gazebo/config/ros_gz_bridge.yaml
+-- Up-to-date symlink: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_gazebo/share/ament_index/resource_index/package_run_dependencies/amm_gazebo
+-- Up-to-date symlink: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_gazebo/share/ament_index/resource_index/parent_prefix_path/amm_gazebo
+-- Up-to-date symlink: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_gazebo/share/amm_gazebo/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_gazebo/share/amm_gazebo/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_gazebo/share/amm_gazebo/environment/path.sh
+-- Up-to-date symlink: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_gazebo/share/amm_gazebo/environment/path.dsv
+-- Up-to-date symlink: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_gazebo/share/amm_gazebo/local_setup.bash
+-- Up-to-date symlink: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_gazebo/share/amm_gazebo/local_setup.sh
+-- Up-to-date symlink: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_gazebo/share/amm_gazebo/local_setup.zsh
+-- Up-to-date symlink: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_gazebo/share/amm_gazebo/local_setup.dsv
+-- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_gazebo/share/amm_gazebo/package.dsv
+-- Up-to-date symlink: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_gazebo/share/ament_index/resource_index/packages/amm_gazebo
+-- Up-to-date symlink: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_gazebo/share/amm_gazebo/cmake/amm_gazeboConfig.cmake
+-- Up-to-date symlink: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_gazebo/share/amm_gazebo/cmake/amm_gazeboConfig-version.cmake
+-- Up-to-date symlink: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_gazebo/share/amm_gazebo/package.xml

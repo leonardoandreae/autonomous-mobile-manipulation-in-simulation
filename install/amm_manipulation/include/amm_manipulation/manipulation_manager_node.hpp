@@ -1,0 +1,1 @@
+/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/src/amm_manipulation/include/amm_manipulation/manipulation_manager_node.hpp

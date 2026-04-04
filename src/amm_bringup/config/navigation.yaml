@@ -1,38 +1,44 @@
-# Shared navigation parameters for navigation_manager and mission_executive.
-# All coordinates are in the Isaac Sim world frame (metres).
-# Adjust these to match your actual room layout in the USD scene.
+# Shared navigation parameters for navigation_manager and mission_manager.
+# Coordinates in the Gazebo world frame (metres).
+#
+# Layout:
+#   Corridor: x ∈ [-7, 7], y ∈ [-1.5, 1.5]
+#   Room 1:   x ∈ [-7, -3], y ∈ [1.5, 7]   — door at x=-5
+#   Room 2:   x ∈ [-1.5, 1.5], y ∈ [1.5, 7] — door at x=0
+#   Room 3:   x ∈ [3, 7], y ∈ [1.5, 7]     — door at x=5
+#   Base:     (0, 0) in corridor
 
 navigation_manager_node:
   ros__parameters:
     waypoints:
       room1:
-        x: 2.0
-        y: 0.0
-        yaw: 0.0          # degrees
+        x: -5.0
+        y: 4.25
+        yaw: 180.0
       room2:
-        x: 4.0
-        y: 4.0
+        x: 0.0
+        y: 4.25
         yaw: 180.0
       room3:
-        x: 0.0
-        y: 4.0
-        yaw: 90.0
+        x: 5.0
+        y: 4.25
+        yaw: 180.0
       base:
         x: 0.0
         y: 0.0
         yaw: 0.0
 
-mission_executive_node:
+mission_manager_node:
   ros__parameters:
     room1:
-      x: 2.0
-      y: 0.0
+      x: -5.0
+      y: 4.25
     room2:
-      x: 4.0
-      y: 4.0
-    room3:
       x: 0.0
-      y: 4.0
+      y: 4.25
+    room3:
+      x: 5.0
+      y: 4.25
     base:
       x: 0.0
       y: 0.0

@@ -1,0 +1,1 @@
+/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/amm_gazebo/ament_cmake_environment_hooks/local_setup.zsh

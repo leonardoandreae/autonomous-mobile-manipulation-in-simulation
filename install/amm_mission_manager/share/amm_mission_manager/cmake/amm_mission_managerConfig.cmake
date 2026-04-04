@@ -1,0 +1,1 @@
+/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/amm_mission_manager/ament_cmake_core/amm_mission_managerConfig.cmake

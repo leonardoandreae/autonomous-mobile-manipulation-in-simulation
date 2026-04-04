@@ -18,15 +18,13 @@ from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import (
     DeclareLaunchArgument,
-    ExecuteProcess,
     IncludeLaunchDescription,
-    RegisterEventHandler,
     LogInfo,
 )
-from launch.event_handlers import OnProcessExit
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
+from launch.substitutions import Command, LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node
+from launch_ros.parameter_descriptions import ParameterValue
 from launch_ros.substitutions import FindPackageShare
 
 
@@ -48,20 +46,21 @@ def generate_launch_description():
     )
 
     # ── Paths ─────────────────────────────────────────────────────────────────
-    gazebo_share   = get_package_share_directory("amm_gazebo")
-    desc_share     = get_package_share_directory("amm_description")
+    gazebo_share = get_package_share_directory("amm_gazebo")
+    desc_share   = get_package_share_directory("amm_description")
 
-    world_file     = os.path.join(gazebo_share, "worlds", "three_room.sdf")
-    bridge_cfg     = os.path.join(gazebo_share, "config", "ros_gz_bridge.yaml")
-    urdf_file      = os.path.join(desc_share,   "urdf",   "ridgeback_franka.urdf.xacro")
+    world_file = os.path.join(gazebo_share, "worlds", "three_room.sdf")
+    bridge_cfg = os.path.join(gazebo_share, "config", "ros_gz_bridge.yaml")
+    urdf_xacro = os.path.join(desc_share,   "urdf",   "ridgeback_franka.urdf.xacro")
 
-    # ── Robot description (xacro → URDF string) ───────────────────────────────
-    # Processed at launch time via xacro CLI
-    robot_description_cmd = [
-        "xacro", urdf_file,
-        "use_gazebo:=true",
-        "sim_gazebo:=true",
-    ]
+    # ── Process xacro → URDF string at launch time ───────────────────────────
+    # xacro cannot be parsed by Gazebo directly; we pre-process it here so that
+    # robot_state_publisher gets a plain URDF string, and the spawner reads
+    # it from the /robot_description topic.
+    robot_description = ParameterValue(
+        Command(["xacro ", urdf_xacro, " use_gazebo:=true"]),
+        value_type=str,
+    )
 
     # ── Gazebo Harmonic ───────────────────────────────────────────────────────
     gz_sim = IncludeLaunchDescription(
@@ -78,19 +77,21 @@ def generate_launch_description():
         }.items(),
     )
 
-    # ── robot_state_publisher ─────────────────────────────────────────────────
+    # ── robot_state_publisher — publishes processed URDF to /robot_description
     robot_state_publisher = Node(
         package="robot_state_publisher",
         executable="robot_state_publisher",
         name="robot_state_publisher",
         output="screen",
         parameters=[{
-            "use_sim_time": use_sim_time,
-            "robot_description": "",   # filled by spawner via topic
+            "use_sim_time":       use_sim_time,
+            "robot_description":  robot_description,
         }],
     )
 
-    # ── Spawn robot into Gazebo ────────────────────────────────────────────────
+    # ── Spawn robot into Gazebo from the /robot_description topic ─────────────
+    # ros_gz_sim's 'create' executable reads the URDF from the ROS topic so
+    # Gazebo never has to parse xacro syntax.
     spawn_robot = Node(
         package="ros_gz_sim",
         executable="create",
@@ -98,7 +99,7 @@ def generate_launch_description():
         output="screen",
         arguments=[
             "-world", "three_room_world",
-            "-file",  urdf_file,
+            "-topic", "/robot_description",
             "-name",  "ridgeback_franka",
             "-x",     "0.0",
             "-y",     "0.0",

@@ -1,0 +1,32 @@
+[0.029s] Invoking command in '/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/amm_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/leonardo/ros2_ws/install/mirte_test:/home/leonardo/ros2_ws/install/launch_testing_examples:/home/leonardo/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_service:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_publisher:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_client:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_action_server:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_action_client:/home/leonardo/ros2_ws/install/examples_rclpy_guard_conditions:/home/leonardo/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/src/amm_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs
+[0.242s] -- The C compiler identification is GNU 13.3.0
+[0.404s] -- The CXX compiler identification is GNU 13.3.0
+[0.429s] -- Detecting C compiler ABI info
+[0.570s] -- Detecting C compiler ABI info - done
+[0.591s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.592s] -- Detecting C compile features
+[0.592s] -- Detecting C compile features - done
+[0.607s] -- Detecting CXX compiler ABI info
+[0.727s] -- Detecting CXX compiler ABI info - done
+[0.739s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.740s] -- Detecting CXX compile features
+[0.740s] -- Detecting CXX compile features - done
+[0.769s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.031s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.124s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.263s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[1.291s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.473s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.580s] -- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.592s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[1.664s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[1.694s] -- Found action_msgs: 2.0.3 (/opt/ros/jazzy/share/action_msgs/cmake)
+[2.571s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[3.196s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.999s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.015s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[4.172s] -- Found PythonExtra: /usr/bin/python3  
+[4.812s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[4.914s] -- Configuring done (4.9s)
+[4.970s] -- Generating done (0.0s)
+[4.984s] -- Build files have been written to: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/amm_msgs

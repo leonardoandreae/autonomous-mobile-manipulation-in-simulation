@@ -1,0 +1,53 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found rclcpp_action: 28.1.16 (/opt/ros/jazzy/share/rclcpp_action/cmake)
+-- Found amm_msgs: 0.1.0 (/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_msgs/share/amm_msgs/cmake)
+-- Found nav2_msgs: 1.3.10 (/opt/ros/jazzy/share/nav2_msgs/cmake)
+-- Configuring done (3.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/amm_mission_manager
+[ 50%] [32mBuilding CXX object CMakeFiles/mission_manager_node.dir/src/mission_manager_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable mission_manager_node[0m
+[100%] Built target mission_manager_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_mission_manager/lib/amm_mission_manager/mission_manager_node
+-- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_mission_manager/include//amm_mission_manager/mission_manager_node.hpp
+-- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_mission_manager/share/ament_index/resource_index/package_run_dependencies/amm_mission_manager
+-- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_mission_manager/share/ament_index/resource_index/parent_prefix_path/amm_mission_manager
+-- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_mission_manager/share/amm_mission_manager/environment/ament_prefix_path.sh
+-- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_mission_manager/share/amm_mission_manager/environment/ament_prefix_path.dsv
+-- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_mission_manager/share/amm_mission_manager/environment/path.sh
+-- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_mission_manager/share/amm_mission_manager/environment/path.dsv
+-- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_mission_manager/share/amm_mission_manager/local_setup.bash
+-- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_mission_manager/share/amm_mission_manager/local_setup.sh
+-- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_mission_manager/share/amm_mission_manager/local_setup.zsh
+-- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_mission_manager/share/amm_mission_manager/local_setup.dsv
+-- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_mission_manager/share/amm_mission_manager/package.dsv
+-- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_mission_manager/share/ament_index/resource_index/packages/amm_mission_manager
+-- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_mission_manager/share/amm_mission_manager/cmake/amm_mission_managerConfig.cmake
+-- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_mission_manager/share/amm_mission_manager/cmake/amm_mission_managerConfig-version.cmake
+-- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/amm_mission_manager/share/amm_mission_manager/package.xml

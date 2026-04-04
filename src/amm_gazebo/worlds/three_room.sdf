@@ -2,252 +2,450 @@
 <!--
   three_room.sdf
   ==============
-  A simple three-room indoor environment for the AMM simulation.
+  Layout (top view — not to scale):
 
-  Layout (top view, not to scale):
-  ┌────────────────────────────────────┐
-  │  Room 1 (2,0)  │  Room 2 (4,4)    │
-  │                │                  │
-  │   [apple]      │   [mug]          │
-  │                │                  │
-  ├────────────────┤  Room 3 (0,4)    │
-  │   Base (0,0)   │                  │
-  │   [drop zone]  │   [bottle]       │
-  └────────────────────────────────────┘
+      x=-7        x=-3  x=-1.5     x=1.5  x=3        x=7
+       │            │      │          │     │            │
+  y=7  ┌────────────┐      ┌──────────┐     ┌────────────┐
+       │            │      │          │     │            │
+       │   ROOM 1   │      │  ROOM 2  │     │   ROOM 3   │
+       │  (apple)   │      │  (mug)   │     │ (bottle)   │
+       │            │      │          │     │            │
+  y=2  └──── ╔╗ ────┘      └─── ╔╗ ──┘     └─── ╔╗ ─────┘
+             ║║                  ║║               ║║
+  y=1.5 ═══════════════════════════════════════════════════ Corridor
+             │                   │                │
+  y=-1.5════════════════════════════════════════════════════
+                            [BASE]
+        sign1              sign2               sign3
 
-  Coordinate frame: Gazebo world frame (x-forward, y-left, z-up)
-  All walls are 0.2 m thick, 2.5 m high.
+  Corridor:  x ∈ [-7, 7],  y ∈ [-1.5, 1.5]   (14 m × 3 m)
+  Room 1:    x ∈ [-7, -3], y ∈ [ 1.5, 7  ]   door centred at x=-5
+  Room 2:    x ∈ [-1.5, 1.5], y ∈ [ 1.5, 7 ] door centred at x=0
+  Room 3:    x ∈ [ 3,  7 ], y ∈ [ 1.5, 7  ]  door centred at x=5
+  Base:      (0, 0)
 -->
 <sdf version="1.9">
   <world name="three_room_world">
 
-    <!-- Physics -->
+    <!-- ── Physics ──────────────────────────────────────────────────────────── -->
     <physics name="default_physics" type="ode">
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1.0</real_time_factor>
     </physics>
 
-    <!-- Plugins -->
-    <plugin filename="gz-sim-physics-system"
-            name="gz::sim::systems::Physics"/>
-    <plugin filename="gz-sim-user-commands-system"
-            name="gz::sim::systems::UserCommands"/>
-    <plugin filename="gz-sim-scene-broadcaster-system"
-            name="gz::sim::systems::SceneBroadcaster"/>
-    <plugin filename="gz-sim-sensors-system"
-            name="gz::sim::systems::Sensors">
+    <!-- ── Plugins ───────────────────────────────────────────────────────────── -->
+    <plugin filename="gz-sim-physics-system"        name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-user-commands-system"  name="gz::sim::systems::UserCommands"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+    <plugin filename="gz-sim-sensors-system"        name="gz::sim::systems::Sensors">
       <render_engine>ogre2</render_engine>
     </plugin>
-    <plugin filename="gz-sim-contact-system"
-            name="gz::sim::systems::Contact"/>
+    <plugin filename="gz-sim-contact-system"        name="gz::sim::systems::Contact"/>
 
-    <!-- Lighting -->
+    <!-- ── Lighting ──────────────────────────────────────────────────────────── -->
     <light name="sun" type="directional">
       <cast_shadows>true</cast_shadows>
-      <pose>0 0 10 0 0 0</pose>
-      <diffuse>0.8 0.8 0.8 1</diffuse>
-      <specular>0.2 0.2 0.2 1</specular>
-      <direction>-0.5 0.1 -0.9</direction>
+      <pose>0 0 15 0 0 0</pose>
+      <diffuse>0.9 0.9 0.9 1</diffuse>
+      <specular>0.3 0.3 0.3 1</specular>
+      <direction>-0.3 0.1 -0.9</direction>
     </light>
 
-    <!-- Ground plane -->
+    <!-- ── Ground plane ──────────────────────────────────────────────────────── -->
     <model name="ground_plane">
       <static>true</static>
       <link name="link">
         <collision name="collision">
-          <geometry><plane><normal>0 0 1</normal><size>20 20</size></plane></geometry>
+          <geometry><plane><normal>0 0 1</normal><size>30 20</size></plane></geometry>
         </collision>
         <visual name="visual">
-          <geometry><plane><normal>0 0 1</normal><size>20 20</size></plane></geometry>
+          <geometry><plane><normal>0 0 1</normal><size>30 20</size></plane></geometry>
           <material>
-            <ambient>0.8 0.8 0.8 1</ambient>
-            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <ambient>0.75 0.75 0.75 1</ambient>
+            <diffuse>0.75 0.75 0.75 1</diffuse>
           </material>
         </visual>
       </link>
     </model>
 
-    <!-- ══════════════════════════════════════════════════════════════════════
-         WALLS
-         ══════════════════════════════════════════════════════════════════════ -->
+    <!-- ════════════════════════════════════════════════════════════════════════
+         HELPER MACRO (SDF does not have macros — walls repeated explicitly)
+         Wall geometry convention: size = (length, thickness, height)
+         ════════════════════════════════════════════════════════════════════════ -->
 
-    <!-- Outer perimeter -->
-    <!-- South wall (y = -1) -->
-    <model name="wall_south">
+    <!-- ── CORRIDOR outer walls ─────────────────────────────────────────────── -->
+
+    <!-- South corridor wall (y = -1.5) -->
+    <model name="wall_corridor_south">
       <static>true</static>
-      <pose>3 -1 1.25 0 0 0</pose>
+      <pose>0 -1.6 1.25 0 0 0</pose>
       <link name="link">
-        <collision name="collision">
-          <geometry><box><size>8 0.2 2.5</size></box></geometry>
-        </collision>
-        <visual name="visual">
-          <geometry><box><size>8 0.2 2.5</size></box></geometry>
-          <material><ambient>0.9 0.9 0.9 1</ambient><diffuse>0.9 0.9 0.9 1</diffuse></material>
+        <collision name="col"><geometry><box><size>14.2 0.2 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>14.2 0.2 2.5</size></box></geometry>
+          <material><ambient>0.88 0.88 0.88 1</ambient><diffuse>0.88 0.88 0.88 1</diffuse></material>
         </visual>
       </link>
     </model>
 
-    <!-- North wall (y = 9) -->
-    <model name="wall_north">
+    <!-- West corridor end cap (x = -7) -->
+    <model name="wall_corridor_west">
       <static>true</static>
-      <pose>3 9 1.25 0 0 0</pose>
+      <pose>-7.1 0 1.25 0 0 0</pose>
       <link name="link">
-        <collision name="collision">
-          <geometry><box><size>8 0.2 2.5</size></box></geometry>
-        </collision>
-        <visual name="visual">
-          <geometry><box><size>8 0.2 2.5</size></box></geometry>
-          <material><ambient>0.9 0.9 0.9 1</ambient><diffuse>0.9 0.9 0.9 1</diffuse></material>
+        <collision name="col"><geometry><box><size>0.2 3.2 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.2 3.2 2.5</size></box></geometry>
+          <material><ambient>0.88 0.88 0.88 1</ambient><diffuse>0.88 0.88 0.88 1</diffuse></material>
         </visual>
       </link>
     </model>
 
-    <!-- West wall (x = -1) -->
-    <model name="wall_west">
+    <!-- East corridor end cap (x = 7) -->
+    <model name="wall_corridor_east">
       <static>true</static>
-      <pose>-1 4 1.25 0 0 0</pose>
+      <pose>7.1 0 1.25 0 0 0</pose>
       <link name="link">
-        <collision name="collision">
-          <geometry><box><size>0.2 10 2.5</size></box></geometry>
-        </collision>
-        <visual name="visual">
-          <geometry><box><size>0.2 10 2.5</size></box></geometry>
-          <material><ambient>0.9 0.9 0.9 1</ambient><diffuse>0.9 0.9 0.9 1</diffuse></material>
+        <collision name="col"><geometry><box><size>0.2 3.2 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.2 3.2 2.5</size></box></geometry>
+          <material><ambient>0.88 0.88 0.88 1</ambient><diffuse>0.88 0.88 0.88 1</diffuse></material>
         </visual>
       </link>
     </model>
 
-    <!-- East wall (x = 7) -->
-    <model name="wall_east">
+    <!-- ── North corridor wall (y = 1.5) — three sections with doorways ──────
+         Doorway 1: x=-5 ± 0.75  (x ∈ [-5.75, -4.25])
+         Doorway 2: x= 0 ± 0.75  (x ∈ [-0.75,  0.75])
+         Doorway 3: x= 5 ± 0.75  (x ∈ [ 4.25,  5.75])
+         ──────────────────────────────────────────────────────────────────────── -->
+
+    <!-- Section west of door 1: x ∈ [-7, -5.75]  len=1.25, centre=-6.375 -->
+    <model name="wall_north_w1">
       <static>true</static>
-      <pose>7 4 1.25 0 0 0</pose>
+      <pose>-6.375 1.6 1.25 0 0 0</pose>
       <link name="link">
-        <collision name="collision">
-          <geometry><box><size>0.2 10 2.5</size></box></geometry>
-        </collision>
-        <visual name="visual">
-          <geometry><box><size>0.2 10 2.5</size></box></geometry>
-          <material><ambient>0.9 0.9 0.9 1</ambient><diffuse>0.9 0.9 0.9 1</diffuse></material>
+        <collision name="col"><geometry><box><size>1.25 0.2 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>1.25 0.2 2.5</size></box></geometry>
+          <material><ambient>0.88 0.88 0.88 1</ambient><diffuse>0.88 0.88 0.88 1</diffuse></material>
         </visual>
       </link>
     </model>
 
-    <!-- Interior wall (x = 3, partial — doorway gap between y=1.5 and y=2.5) -->
-    <model name="wall_interior_south">
+    <!-- Section door1–door2: x ∈ [-4.25, -0.75]  len=3.5, centre=-2.5 -->
+    <model name="wall_north_mid1">
       <static>true</static>
-      <pose>3 0.5 1.25 0 0 0</pose>
+      <pose>-2.5 1.6 1.25 0 0 0</pose>
       <link name="link">
-        <collision name="collision">
-          <geometry><box><size>0.2 3 2.5</size></box></geometry>
-        </collision>
-        <visual name="visual">
-          <geometry><box><size>0.2 3 2.5</size></box></geometry>
-          <material><ambient>0.85 0.85 0.85 1</ambient><diffuse>0.85 0.85 0.85 1</diffuse></material>
+        <collision name="col"><geometry><box><size>3.5 0.2 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>3.5 0.2 2.5</size></box></geometry>
+          <material><ambient>0.88 0.88 0.88 1</ambient><diffuse>0.88 0.88 0.88 1</diffuse></material>
         </visual>
       </link>
     </model>
 
-    <model name="wall_interior_north">
+    <!-- Section door2–door3: x ∈ [0.75, 4.25]  len=3.5, centre=2.5 -->
+    <model name="wall_north_mid2">
       <static>true</static>
-      <pose>3 6.5 1.25 0 0 0</pose>
+      <pose>2.5 1.6 1.25 0 0 0</pose>
       <link name="link">
-        <collision name="collision">
-          <geometry><box><size>0.2 5 2.5</size></box></geometry>
-        </collision>
-        <visual name="visual">
-          <geometry><box><size>0.2 5 2.5</size></box></geometry>
-          <material><ambient>0.85 0.85 0.85 1</ambient><diffuse>0.85 0.85 0.85 1</diffuse></material>
+        <collision name="col"><geometry><box><size>3.5 0.2 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>3.5 0.2 2.5</size></box></geometry>
+          <material><ambient>0.88 0.88 0.88 1</ambient><diffuse>0.88 0.88 0.88 1</diffuse></material>
         </visual>
       </link>
     </model>
 
-    <!-- Horizontal divider between Room 2 and Room 3 (y = 4, east half) -->
-    <model name="wall_room23">
+    <!-- Section east of door 3: x ∈ [5.75, 7]  len=1.25, centre=6.375 -->
+    <model name="wall_north_e3">
       <static>true</static>
-      <pose>5 4 1.25 0 0 0</pose>
+      <pose>6.375 1.6 1.25 0 0 0</pose>
       <link name="link">
-        <collision name="collision">
-          <geometry><box><size>4 0.2 2.5</size></box></geometry>
-        </collision>
-        <visual name="visual">
-          <geometry><box><size>4 0.2 2.5</size></box></geometry>
-          <material><ambient>0.85 0.85 0.85 1</ambient><diffuse>0.85 0.85 0.85 1</diffuse></material>
+        <collision name="col"><geometry><box><size>1.25 0.2 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>1.25 0.2 2.5</size></box></geometry>
+          <material><ambient>0.88 0.88 0.88 1</ambient><diffuse>0.88 0.88 0.88 1</diffuse></material>
         </visual>
       </link>
     </model>
 
-    <!-- ══════════════════════════════════════════════════════════════════════
+    <!-- ── ROOM 1  (x ∈ [-7,-3],  y ∈ [1.5,7]) ─────────────────────────────── -->
+
+    <model name="wall_r1_north">
+      <static>true</static>
+      <pose>-5 7.1 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>4.2 0.2 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>4.2 0.2 2.5</size></box></geometry>
+          <material><ambient>0.88 0.88 0.88 1</ambient><diffuse>0.88 0.88 0.88 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall_r1_west">
+      <static>true</static>
+      <pose>-7.1 4.25 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>0.2 5.5 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.2 5.5 2.5</size></box></geometry>
+          <material><ambient>0.88 0.88 0.88 1</ambient><diffuse>0.88 0.88 0.88 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- East wall of room 1 / west wall of gap (x=-3) -->
+    <model name="wall_r1_east">
+      <static>true</static>
+      <pose>-2.9 4.25 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>0.2 5.5 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.2 5.5 2.5</size></box></geometry>
+          <material><ambient>0.88 0.88 0.88 1</ambient><diffuse>0.88 0.88 0.88 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ── ROOM 2  (x ∈ [-1.5,1.5],  y ∈ [1.5,7]) ──────────────────────────── -->
+
+    <model name="wall_r2_north">
+      <static>true</static>
+      <pose>0 7.1 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>3.2 0.2 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>3.2 0.2 2.5</size></box></geometry>
+          <material><ambient>0.88 0.88 0.88 1</ambient><diffuse>0.88 0.88 0.88 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall_r2_west">
+      <static>true</static>
+      <pose>-1.6 4.25 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>0.2 5.5 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.2 5.5 2.5</size></box></geometry>
+          <material><ambient>0.88 0.88 0.88 1</ambient><diffuse>0.88 0.88 0.88 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall_r2_east">
+      <static>true</static>
+      <pose>1.6 4.25 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>0.2 5.5 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.2 5.5 2.5</size></box></geometry>
+          <material><ambient>0.88 0.88 0.88 1</ambient><diffuse>0.88 0.88 0.88 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ── ROOM 3  (x ∈ [3,7],  y ∈ [1.5,7]) ───────────────────────────────── -->
+
+    <model name="wall_r3_north">
+      <static>true</static>
+      <pose>5 7.1 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>4.2 0.2 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>4.2 0.2 2.5</size></box></geometry>
+          <material><ambient>0.88 0.88 0.88 1</ambient><diffuse>0.88 0.88 0.88 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall_r3_west">
+      <static>true</static>
+      <pose>2.9 4.25 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>0.2 5.5 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.2 5.5 2.5</size></box></geometry>
+          <material><ambient>0.88 0.88 0.88 1</ambient><diffuse>0.88 0.88 0.88 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall_r3_east">
+      <static>true</static>
+      <pose>7.1 4.25 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>0.2 5.5 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.2 5.5 2.5</size></box></geometry>
+          <material><ambient>0.88 0.88 0.88 1</ambient><diffuse>0.88 0.88 0.88 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+         ROOM ENTRANCE SIGNS
+         Coloured panels mounted on the corridor-side of each doorway wall,
+         at eye level (~1.5 m).  Each room gets a distinct colour.
+         Sign dimensions: 0.8 m wide × 0.4 m tall × 0.05 m deep.
+         ════════════════════════════════════════════════════════════════════════ -->
+
+    <!-- Sign — ROOM 1 (red/warm)  mounted east of doorway, x=-4.25, y=1.6 -->
+    <model name="sign_room1">
+      <static>true</static>
+      <pose>-4.1 1.55 1.5 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>0.05 0.8 0.4</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.05 0.8 0.4</size></box></geometry>
+          <material><ambient>0.9 0.2 0.1 1</ambient><diffuse>0.9 0.2 0.1 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Sign — ROOM 2 (blue)  mounted west of doorway, x=-0.75, y=1.6 -->
+    <model name="sign_room2">
+      <static>true</static>
+      <pose>-0.6 1.55 1.5 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>0.05 0.8 0.4</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.05 0.8 0.4</size></box></geometry>
+          <material><ambient>0.1 0.3 0.9 1</ambient><diffuse>0.1 0.3 0.9 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Sign — ROOM 3 (green)  mounted west of doorway, x=4.25, y=1.6 -->
+    <model name="sign_room3">
+      <static>true</static>
+      <pose>4.4 1.55 1.5 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>0.05 0.8 0.4</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.05 0.8 0.4</size></box></geometry>
+          <material><ambient>0.1 0.8 0.2 1</ambient><diffuse>0.1 0.8 0.2 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+         CORRIDOR FLOOR MARKINGS
+         Thin coloured pads on the floor outside each doorway so the robot
+         can visually confirm which room it is entering.
+         ════════════════════════════════════════════════════════════════════════ -->
+
+    <model name="floor_mark_room1">
+      <static>true</static>
+      <pose>-5 1.2 0.002 0 0 0</pose>
+      <link name="link">
+        <visual name="vis">
+          <geometry><box><size>1.5 0.3 0.004</size></box></geometry>
+          <material><ambient>0.9 0.2 0.1 0.8</ambient><diffuse>0.9 0.2 0.1 0.8</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="floor_mark_room2">
+      <static>true</static>
+      <pose>0 1.2 0.002 0 0 0</pose>
+      <link name="link">
+        <visual name="vis">
+          <geometry><box><size>1.5 0.3 0.004</size></box></geometry>
+          <material><ambient>0.1 0.3 0.9 0.8</ambient><diffuse>0.1 0.3 0.9 0.8</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="floor_mark_room3">
+      <static>true</static>
+      <pose>5 1.2 0.002 0 0 0</pose>
+      <link name="link">
+        <visual name="vis">
+          <geometry><box><size>1.5 0.3 0.004</size></box></geometry>
+          <material><ambient>0.1 0.8 0.2 0.8</ambient><diffuse>0.1 0.8 0.2 0.8</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ════════════════════════════════════════════════════════════════════════
          PICKABLE OBJECTS
-         Named exactly as the LLM will reference them.
-         ══════════════════════════════════════════════════════════════════════ -->
+         Placed on the floor in the centre of each room.
+         Names must match what the LLM will emit in the TaskCommand.
+         ════════════════════════════════════════════════════════════════════════ -->
 
-    <!-- apple — in Room 1 (x≈2, y≈0) -->
+    <!-- apple — Room 1 centre (-5, 4.25) -->
     <model name="apple">
-      <pose>2.0 0.5 0.05 0 0 0</pose>
+      <pose>-5.0 4.25 0.04 0 0 0</pose>
       <link name="link">
         <inertial>
           <mass>0.2</mass>
           <inertia><ixx>0.0001</ixx><ixy>0</ixy><ixz>0</ixz>
                    <iyy>0.0001</iyy><iyz>0</iyz><izz>0.0001</izz></inertia>
         </inertial>
-        <collision name="collision">
+        <collision name="col">
           <geometry><sphere><radius>0.04</radius></sphere></geometry>
         </collision>
-        <visual name="visual">
+        <visual name="vis">
           <geometry><sphere><radius>0.04</radius></sphere></geometry>
-          <material><ambient>0.8 0.1 0.1 1</ambient><diffuse>0.8 0.1 0.1 1</diffuse></material>
+          <material><ambient>0.85 0.1 0.1 1</ambient><diffuse>0.85 0.1 0.1 1</diffuse></material>
         </visual>
       </link>
     </model>
 
-    <!-- mug — in Room 2 (x≈5, y≈6) -->
+    <!-- mug — Room 2 centre (0, 4.25) -->
     <model name="mug">
-      <pose>5.0 6.0 0.06 0 0 0</pose>
+      <pose>0.0 4.25 0.06 0 0 0</pose>
       <link name="link">
         <inertial>
           <mass>0.3</mass>
           <inertia><ixx>0.0002</ixx><ixy>0</ixy><ixz>0</ixz>
                    <iyy>0.0002</iyy><iyz>0</iyz><izz>0.0001</izz></inertia>
         </inertial>
-        <collision name="collision">
+        <collision name="col">
           <geometry><cylinder><radius>0.04</radius><length>0.12</length></cylinder></geometry>
         </collision>
-        <visual name="visual">
+        <visual name="vis">
           <geometry><cylinder><radius>0.04</radius><length>0.12</length></cylinder></geometry>
-          <material><ambient>0.2 0.4 0.8 1</ambient><diffuse>0.2 0.4 0.8 1</diffuse></material>
+          <material><ambient>0.2 0.4 0.85 1</ambient><diffuse>0.2 0.4 0.85 1</diffuse></material>
         </visual>
       </link>
     </model>
 
-    <!-- bottle — in Room 3 (x≈1, y≈6) -->
+    <!-- bottle — Room 3 centre (5, 4.25) -->
     <model name="bottle">
-      <pose>1.0 6.0 0.12 0 0 0</pose>
+      <pose>5.0 4.25 0.12 0 0 0</pose>
       <link name="link">
         <inertial>
           <mass>0.5</mass>
           <inertia><ixx>0.0005</ixx><ixy>0</ixy><ixz>0</ixz>
                    <iyy>0.0005</iyy><iyz>0</iyz><izz>0.0001</izz></inertia>
         </inertial>
-        <collision name="collision">
+        <collision name="col">
           <geometry><cylinder><radius>0.035</radius><length>0.24</length></cylinder></geometry>
         </collision>
-        <visual name="visual">
+        <visual name="vis">
           <geometry><cylinder><radius>0.035</radius><length>0.24</length></cylinder></geometry>
-          <material><ambient>0.1 0.7 0.2 1</ambient><diffuse>0.1 0.7 0.2 1</diffuse></material>
+          <material><ambient>0.1 0.75 0.2 1</ambient><diffuse>0.1 0.75 0.2 1</diffuse></material>
         </visual>
       </link>
     </model>
 
-    <!-- ══════════════════════════════════════════════════════════════════════
-         DROP ZONE MARKER (base, non-physical)
-         ══════════════════════════════════════════════════════════════════════ -->
+    <!-- ════════════════════════════════════════════════════════════════════════
+         BASE ZONE MARKER  (corridor centre, non-physical)
+         ════════════════════════════════════════════════════════════════════════ -->
     <model name="base_marker">
       <static>true</static>
       <pose>0.0 0.0 0.001 0 0 0</pose>
       <link name="link">
-        <visual name="visual">
-          <geometry><box><size>0.6 0.6 0.002</size></box></geometry>
-          <material><ambient>0.9 0.8 0.0 0.6</ambient><diffuse>0.9 0.8 0.0 0.6</diffuse></material>
+        <visual name="vis">
+          <geometry><box><size>0.8 0.8 0.002</size></box></geometry>
+          <material><ambient>0.95 0.8 0.0 0.7</ambient><diffuse>0.95 0.8 0.0 0.7</diffuse></material>
         </visual>
       </link>
     </model>

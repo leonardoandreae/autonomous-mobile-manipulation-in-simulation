@@ -37,6 +37,6 @@ install(TARGETS manipulation_manager_node
 )
 
 install(DIRECTORY include/ DESTINATION include/)
-install(DIRECTORY config/  DESTINATION share/${PROJECT_NAME}/config)
+install(DIRECTORY config/   DESTINATION share/${PROJECT_NAME}/config OPTIONAL)
 
 ament_package()

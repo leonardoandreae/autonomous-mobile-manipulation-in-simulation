@@ -1,0 +1,221 @@
+[0.031s] Invoking command in '/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/franka_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/leonardo/ros2_ws/install/mirte_test:/home/leonardo/ros2_ws/install/launch_testing_examples:/home/leonardo/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_service:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_publisher:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_client:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_action_server:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_action_client:/home/leonardo/ros2_ws/install/examples_rclpy_guard_conditions:/home/leonardo/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/src/franka_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description
+[0.112s] -- The C compiler identification is GNU 13.3.0
+[0.234s] -- The CXX compiler identification is GNU 13.3.0
+[0.254s] -- Detecting C compiler ABI info
+[0.372s] -- Detecting C compiler ABI info - done
+[0.388s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.388s] -- Detecting C compile features
+[0.389s] -- Detecting C compile features - done
+[0.400s] -- Detecting CXX compiler ABI info
+[0.510s] -- Detecting CXX compiler ABI info - done
+[0.535s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.536s] -- Detecting CXX compile features
+[0.536s] -- Detecting CXX compile features - done
+[0.546s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.819s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.959s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.149s] -- Found ament_lint_auto: 0.17.4 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.911s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.951s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.951s] -- Configured 'flake8' exclude dirs and/or files: 
+[1.957s] -- Added test 'lint_cmake' to check CMake code style
+[1.961s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.979s] -- Added test 'xmllint' to check XML markup files
+[1.984s] -- Configuring done (1.9s)
+[1.987s] -- Generating done (0.0s)
+[1.989s] -- Build files have been written to: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/franka_description
+[1.995s] Invoked command in '/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/franka_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/leonardo/ros2_ws/install/mirte_test:/home/leonardo/ros2_ws/install/launch_testing_examples:/home/leonardo/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_service:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_publisher:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_client:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_action_server:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_action_client:/home/leonardo/ros2_ws/install/examples_rclpy_guard_conditions:/home/leonardo/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/src/franka_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description
+[1.996s] Invoking command in '/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/franka_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/leonardo/ros2_ws/install/mirte_test:/home/leonardo/ros2_ws/install/launch_testing_examples:/home/leonardo/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_service:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_publisher:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_client:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_action_server:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_action_client:/home/leonardo/ros2_ws/install/examples_rclpy_guard_conditions:/home/leonardo/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/franka_description -- -j8 -l8
+[2.044s] Invoked command in '/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/franka_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/leonardo/ros2_ws/install/mirte_test:/home/leonardo/ros2_ws/install/launch_testing_examples:/home/leonardo/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_service:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_publisher:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_client:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_action_server:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_action_client:/home/leonardo/ros2_ws/install/examples_rclpy_guard_conditions:/home/leonardo/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/franka_description -- -j8 -l8
+[2.045s] Invoking command in '/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/franka_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/leonardo/ros2_ws/install/mirte_test:/home/leonardo/ros2_ws/install/launch_testing_examples:/home/leonardo/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_service:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_publisher:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_client:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_action_server:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_action_client:/home/leonardo/ros2_ws/install/examples_rclpy_guard_conditions:/home/leonardo/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/franka_description
+[2.055s] -- Install configuration: ""
+[2.056s] -- Execute custom install script
+[2.056s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//launch/visualize_franka.launch.py
+[2.068s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//launch/visualize_franka_duo.launch.py
+[2.080s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/common/franka_arm.ros2_control.xacro
+[2.091s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/common/franka_arm.srdf.xacro
+[2.104s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/common/franka_arm.xacro
+[2.115s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/common/franka_robot.xacro
+[2.127s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/common/group_definition.xacro
+[2.138s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/common/utils.xacro
+[2.150s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fer/dynamics.yaml
+[2.162s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fer/fer.srdf.xacro
+[2.174s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fer/fer.urdf.xacro
+[2.186s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fer/inertials.yaml
+[2.198s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fer/joint_limits.yaml
+[2.210s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fer/kinematics.yaml
+[2.222s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fp3/accelerometers.yaml
+[2.234s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fp3/dynamics.yaml
+[2.245s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fp3/fp3.srdf.xacro
+[2.257s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fp3/fp3.urdf.xacro
+[2.268s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fp3/inertials.yaml
+[2.280s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fp3/joint_limits.yaml
+[2.292s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fp3/kinematics.yaml
+[2.304s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3/accelerometers.yaml
+[2.315s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3/dynamics.yaml
+[2.327s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3/fr3.srdf.xacro
+[2.339s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3/fr3.urdf.xacro
+[2.350s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3/inertials.yaml
+[2.362s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3/joint_limits.yaml
+[2.373s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3/kinematics.yaml
+[2.385s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3_duo/fr3_duo.srdf.xacro
+[2.397s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3_duo/fr3_duo.urdf.xacro
+[2.408s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3_duo/fr3_duo_arm.urdf.xacro
+[2.420s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3_duo/fr3_duo_fixed_structure.urdf.xacro
+[2.432s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3_duo/fr3_duo_head.xacro
+[2.444s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3_duo/fr3_duo_mount/fr3_duo_mount.xacro
+[2.455s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3_duo/fr3_duo_mount/inertials.yaml
+[2.467s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3_duo/fr3_duo_mount/kinematics.yaml
+[2.478s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3v2/accelerometers.yaml
+[2.490s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3v2/dynamics.yaml
+[2.502s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3v2/fr3v2.srdf.xacro
+[2.513s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3v2/fr3v2.urdf.xacro
+[2.525s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3v2/inertials.yaml
+[2.536s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3v2/joint_limits.yaml
+[2.548s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3v2/kinematics.yaml
+[2.560s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3v2_1/accelerometers.yaml
+[2.571s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3v2_1/dynamics.yaml
+[2.583s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3v2_1/fr3v2_1.srdf.xacro
+[2.595s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3v2_1/fr3v2_1.urdf.xacro
+[2.606s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3v2_1/inertials.yaml
+[2.618s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3v2_1/joint_limits.yaml
+[2.630s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/fr3v2_1/kinematics.yaml
+[2.642s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/mobile_fr3_duo_v0_2/mobile_fr3_duo.ros2_control.xacro
+[2.653s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/mobile_fr3_duo_v0_2/mobile_fr3_duo_v0_2.urdf.xacro
+[2.665s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/mobile_fr3_duo_v0_2/mobile_fr3_duo_v0_2.xacro
+[2.677s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/tmrv0_2/argo_drive.xacro
+[2.689s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/tmrv0_2/caster_wheel.xacro
+[2.701s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/tmrv0_2/inertia.xacro
+[2.713s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/tmrv0_2/rocker_arm.xacro
+[2.724s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/tmrv0_2/tmrv0_2.ros2_control.xacro
+[2.736s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/tmrv0_2/tmrv0_2.urdf.xacro
+[2.747s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//robots/tmrv0_2/tmrv0_2.xacro
+[2.760s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//end_effectors/cobot_pump/cobot_pump.urdf.xacro
+[2.771s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//end_effectors/cobot_pump/cobot_pump_arguments.xacro
+[2.783s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//end_effectors/cobot_pump/inertials.yaml
+[2.795s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//end_effectors/common/ee_with_one_link.xacro
+[2.807s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//end_effectors/common/franka_hand.xacro
+[2.818s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//end_effectors/common/utils.xacro
+[2.830s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//end_effectors/franka_hand/franka_hand.srdf.xacro
+[2.842s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//end_effectors/franka_hand/franka_hand.urdf.xacro
+[2.854s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//end_effectors/franka_hand/franka_hand_arguments.xacro
+[2.865s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//end_effectors/franka_hand/inertials.yaml
+[2.879s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/accessories/fr3_duo_head/collision/fr3_duo_head.stl
+[2.891s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/accessories/fr3_duo_head/visual/fr3_duo_head.dae
+[2.903s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/accessories/fr3_duo_mount/collision/fr3_duo_cover.stl
+[2.915s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/accessories/fr3_duo_mount/collision/fr3_duo_mount.stl
+[2.926s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/accessories/fr3_duo_mount/visual/fr3_duo_cover.dae
+[2.939s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/accessories/fr3_duo_mount/visual/fr3_duo_mount.dae
+[2.950s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/accessories/franka_spine/collision/franka_spine.stl
+[2.962s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/accessories/franka_spine/visual/franka_spine.dae
+[2.974s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robot_ee/cobot_pump/collision/cobot_pump.stl
+[2.986s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robot_ee/cobot_pump/visual/cobot_pump.dae
+[2.998s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robot_ee/franka_hand_black/collision/hand.stl
+[3.010s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robot_ee/franka_hand_black/visual/finger.dae
+[3.022s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robot_ee/franka_hand_black/visual/hand.dae
+[3.033s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robot_ee/franka_hand_white/collision/hand.stl
+[3.045s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robot_ee/franka_hand_white/visual/finger.dae
+[3.056s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robot_ee/franka_hand_white/visual/hand.dae
+[3.068s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fer/collision/hand.stl
+[3.079s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fer/collision/link0.stl
+[3.090s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fer/collision/link1.stl
+[3.102s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fer/collision/link2.stl
+[3.114s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fer/collision/link3.stl
+[3.125s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fer/collision/link4.stl
+[3.137s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fer/collision/link5.stl
+[3.148s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fer/collision/link6.stl
+[3.160s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fer/collision/link7.stl
+[3.172s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fer/visual/finger.dae
+[3.183s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fer/visual/hand.dae
+[3.195s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fer/visual/link0.dae
+[3.207s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fer/visual/link1.dae
+[3.219s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fer/visual/link2.dae
+[3.231s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fer/visual/link3.dae
+[3.242s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fer/visual/link4.dae
+[3.254s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fer/visual/link5.dae
+[3.266s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fer/visual/link6.dae
+[3.277s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fer/visual/link7.dae
+[3.289s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fp3/collision/link0.stl
+[3.302s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fp3/collision/link1.stl
+[3.313s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fp3/collision/link2.stl
+[3.325s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fp3/collision/link3.stl
+[3.336s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fp3/collision/link4.stl
+[3.348s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fp3/collision/link5.stl
+[3.360s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fp3/collision/link6.stl
+[3.371s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fp3/collision/link7.stl
+[3.383s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fp3/visual/link0.dae
+[3.395s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fp3/visual/link1.dae
+[3.407s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fp3/visual/link2.dae
+[3.419s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fp3/visual/link3.dae
+[3.430s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fp3/visual/link4.dae
+[3.442s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fp3/visual/link5.dae
+[3.454s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fp3/visual/link6.dae
+[3.465s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fp3/visual/link7.dae
+[3.477s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3/collision/link0.stl
+[3.488s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3/collision/link1.stl
+[3.500s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3/collision/link2.stl
+[3.511s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3/collision/link3.stl
+[3.523s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3/collision/link4.stl
+[3.535s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3/collision/link5.stl
+[3.546s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3/collision/link6.stl
+[3.558s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3/collision/link7.stl
+[3.569s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3/visual/link0.dae
+[3.580s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3/visual/link1.dae
+[3.592s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3/visual/link2.dae
+[3.604s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3/visual/link3.dae
+[3.616s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3/visual/link4.dae
+[3.628s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3/visual/link5.dae
+[3.639s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3/visual/link6.dae
+[3.651s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3/visual/link7.dae
+[3.662s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2/collision/link0.stl
+[3.674s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2/collision/link1.stl
+[3.685s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2/collision/link2.stl
+[3.698s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2/collision/link3.stl
+[3.709s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2/collision/link4.stl
+[3.721s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2/collision/link5.stl
+[3.732s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2/collision/link6.stl
+[3.744s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2/collision/link7.stl
+[3.756s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2/visual/link0.dae
+[3.767s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2/visual/link1.dae
+[3.779s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2/visual/link2.dae
+[3.791s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2/visual/link3.dae
+[3.803s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2/visual/link4.dae
+[3.814s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2/visual/link5.dae
+[3.826s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2/visual/link6.dae
+[3.837s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2/visual/link7.dae
+[3.849s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2_1/collision/link0.stl
+[3.861s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2_1/collision/link1.stl
+[3.872s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2_1/collision/link2.stl
+[3.884s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2_1/collision/link3.stl
+[3.896s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2_1/collision/link4.stl
+[3.908s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2_1/collision/link5.stl
+[3.920s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2_1/collision/link6.stl
+[3.931s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2_1/collision/link7.stl
+[3.944s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2_1/visual/link0.dae
+[3.955s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2_1/visual/link1.dae
+[3.967s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2_1/visual/link2.dae
+[3.979s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2_1/visual/link3.dae
+[3.990s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2_1/visual/link4.dae
+[4.002s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2_1/visual/link5.dae
+[4.014s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2_1/visual/link6.dae
+[4.025s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/fr3v2_1/visual/link7.dae
+[4.037s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/tmrv0_2/collision/tmrv0_2.stl
+[4.049s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//meshes/robots/tmrv0_2/visual/tmrv0_2.dae
+[4.061s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//rviz/visualize_franka.rviz
+[4.072s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description//rviz/visualize_franka_duo.rviz
+[4.084s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/ament_index/resource_index/package_run_dependencies/franka_description
+[4.096s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/ament_index/resource_index/parent_prefix_path/franka_description
+[4.108s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description/environment/ament_prefix_path.sh
+[4.120s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description/environment/ament_prefix_path.dsv
+[4.132s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description/environment/path.sh
+[4.144s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description/environment/path.dsv
+[4.155s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description/local_setup.bash
+[4.167s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description/local_setup.sh
+[4.179s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description/local_setup.zsh
+[4.191s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description/local_setup.dsv
+[4.203s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description/package.dsv
+[4.214s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/ament_index/resource_index/packages/franka_description
+[4.226s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description/cmake/franka_descriptionConfig.cmake
+[4.238s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description/cmake/franka_descriptionConfig-version.cmake
+[4.250s] -- Symlinking: /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/install/franka_description/share/franka_description/package.xml
+[4.263s] Invoked command in '/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/franka_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/leonardo/ros2_ws/install/mirte_test:/home/leonardo/ros2_ws/install/launch_testing_examples:/home/leonardo/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_service:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_publisher:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_client:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_action_server:/home/leonardo/ros2_ws/install/examples_rclpy_minimal_action_client:/home/leonardo/ros2_ws/install/examples_rclpy_guard_conditions:/home/leonardo/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/franka_description

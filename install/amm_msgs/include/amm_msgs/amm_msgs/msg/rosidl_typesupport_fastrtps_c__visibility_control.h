@@ -1,0 +1,1 @@
+/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/amm_msgs/rosidl_typesupport_fastrtps_c/amm_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
