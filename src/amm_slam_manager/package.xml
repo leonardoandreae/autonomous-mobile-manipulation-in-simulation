@@ -7,7 +7,7 @@
     SLAM lifecycle manager — starts/stops slam_toolbox, saves and loads maps,
     and switches between mapping and localization modes.
   </description>
-  <maintainer email="user@todo.com">user</maintainer>
+  <maintainer email="leoandreae@gmail.com">Leonardo Andreae</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

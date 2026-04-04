@@ -4,7 +4,7 @@
   <name>amm_navigation_manager</name>
   <version>0.1.0</version>
   <description>Navigation manager — wraps Nav2 NavigateToPose with room-waypoint management.</description>
-  <maintainer email="user@todo.com">user</maintainer>
+  <maintainer email="leoandreae@gmail.com">Leonardo Andreae</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

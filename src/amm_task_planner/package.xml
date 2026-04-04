@@ -7,7 +7,7 @@
     Task planner node — translates natural language prompts into structured TaskCommand
     messages using a local LLM via Ollama (free, runs on-device).
   </description>
-  <maintainer email="user@todo.com">user</maintainer>
+  <maintainer email="leoandreae@gmail.com">Leonardo Andreae</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

@@ -8,7 +8,7 @@
     The USD asset (ridgeback_franka.usd) is loaded directly in Isaac Sim.
     This package provides the URDF/Xacro for ROS 2 tools (rviz2, MoveIt, tf2).
   </description>
-  <maintainer email="user@todo.com">user</maintainer>
+  <maintainer email="leoandreae@gmail.com">Leonardo Andreae</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

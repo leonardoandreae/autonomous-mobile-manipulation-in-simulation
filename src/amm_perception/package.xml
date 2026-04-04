@@ -7,7 +7,7 @@
     Perception node — wraps isaac_ros_grounding_dino (open-vocabulary detection)
     and isaac_ros_foundationpose (6-DoF pose estimation) to locate objects by name.
   </description>
-  <maintainer email="user@todo.com">user</maintainer>
+  <maintainer email="leoandreae@gmail.com">Leonardo Andreae</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
