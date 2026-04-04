@@ -1,0 +1,10 @@
+# Goal: object to pick
+amm_msgs/DetectedObject object
+---
+# Result
+bool   success
+string message
+---
+# Feedback
+string status
+float32 progress

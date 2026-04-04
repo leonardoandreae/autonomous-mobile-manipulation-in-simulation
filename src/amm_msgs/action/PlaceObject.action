@@ -1,0 +1,10 @@
+# Goal: target placement pose
+geometry_msgs/PoseStamped target_pose
+---
+# Result
+bool   success
+string message
+---
+# Feedback
+string status
+float32 progress

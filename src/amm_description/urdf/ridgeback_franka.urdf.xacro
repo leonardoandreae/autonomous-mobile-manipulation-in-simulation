@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+  ridgeback_franka.urdf.xacro
+  ============================
+  Combines the Clearpath Ridgeback omnidirectional mobile base with the
+  Franka FR3 7-DoF arm mounted on the top plate.
+
+  Dependencies (must be installed / cloned into your workspace):
+    - ridgeback_description   (ros-jazzy-ridgeback-description or from source)
+    - franka_description      (from franka_ros2, Jazzy branch)
+
+  The full robot model is already available as a native USD asset inside
+  Isaac Sim: Robots/Clearpath/Ridgeback/ridgeback_franka.usd
+  This URDF is used by ROS 2 tools (RViz2, MoveIt, TF tree) only.
+
+  Usage:
+    ros2 launch amm_description description.launch.py
+-->
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ridgeback_franka">
+
+  <!-- ── Ridgeback base ──────────────────────────────────────────────────────── -->
+  <xacro:include filename="$(find ridgeback_description)/urdf/ridgeback.urdf.xacro"/>
+
+  <!-- ── Franka FR3 arm ─────────────────────────────────────────────────────── -->
+  <xacro:include filename="$(find franka_description)/robots/fr3/fr3.urdf.xacro"/>
+
+  <!-- ── Mount the arm on the Ridgeback top plate ───────────────────────────── -->
+  <!--
+    The Ridgeback top plate link is "mid_mount".
+    The arm is attached with a fixed joint so that the FR3 base aligns
+    with the centre of the Ridgeback chassis.
+
+    Adjust xyz/rpy to match the physical or simulated mounting position.
+  -->
+  <joint name="ridgeback_to_fr3" type="fixed">
+    <parent link="mid_mount"/>
+    <child  link="fr3_link0"/>
+    <origin xyz="0.0 0.0 0.05" rpy="0 0 0"/>
+  </joint>
+
+  <!-- ── Franka Hand (parallel gripper) ────────────────────────────────────── -->
+  <!-- The Franka Hand is included as part of fr3.urdf.xacro above.            -->
+  <!-- End-effector TCP link: fr3_hand_tcp                                      -->
+
+</robot>

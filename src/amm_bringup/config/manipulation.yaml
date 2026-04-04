@@ -1,0 +1,10 @@
+manipulation_manager_node:
+  ros__parameters:
+    # MoveIt 2 planning group names (must match ridgeback_franka MoveIt config)
+    arm_group_name:      "fr3_arm"
+    gripper_group_name:  "fr3_hand"
+    end_effector_link:   "fr3_hand_tcp"
+
+    # Motion parameters
+    approach_distance_m: 0.10   # vertical approach/retreat distance
+    lift_distance_m:     0.15   # height to lift after grasping

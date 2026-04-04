@@ -1,0 +1,5 @@
+task_planner_node:
+  ros__parameters:
+    ollama_host: "http://localhost:11434"
+    ollama_model: "llama3.2"       # any model pulled via: ollama pull llama3.2
+    request_timeout_s: 30

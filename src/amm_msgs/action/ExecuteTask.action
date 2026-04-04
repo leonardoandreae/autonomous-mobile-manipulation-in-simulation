@@ -1,0 +1,10 @@
+# Goal: natural language task description
+string prompt
+---
+# Result
+bool   success
+string message
+amm_msgs/TaskCommand task_command
+---
+# Feedback
+string status

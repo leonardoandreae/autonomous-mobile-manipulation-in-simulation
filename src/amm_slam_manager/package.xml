@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>amm_slam_manager</name>
+  <version>0.1.0</version>
+  <description>
+    SLAM lifecycle manager — starts/stops slam_toolbox, saves and loads maps,
+    and switches between mapping and localization modes.
+  </description>
+  <maintainer email="user@todo.com">user</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>rclcpp_lifecycle</depend>
+  <depend>lifecycle_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>std_srvs</depend>
+  <depend>slam_toolbox</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

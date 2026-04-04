@@ -1,0 +1,9 @@
+task_planner_node:
+  ros__parameters:
+    # Ollama REST API — free local LLM runner (https://ollama.com)
+    # Setup: curl -fsSL https://ollama.com/install.sh | sh
+    #        ollama pull llama3.2
+    #        ollama serve
+    ollama_host: "http://localhost:11434"
+    ollama_model: "llama3.2"
+    request_timeout_s: 30
