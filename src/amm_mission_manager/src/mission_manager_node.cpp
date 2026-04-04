@@ -1,4 +1,4 @@
-#include "amm_mission_executive/mission_executive_node.hpp"
+#include "amm_mission_manager/mission_manager_node.hpp"
 
 #include <chrono>
 #include <map>
@@ -6,7 +6,7 @@
 
 using namespace std::chrono_literals;
 
-namespace amm_mission_executive
+namespace amm_mission_manager
 {
 
 // ── Utilities ──────────────────────────────────────────────────────────────────
@@ -28,8 +28,8 @@ std::string to_string(MissionState s)
 
 // ── Constructor ────────────────────────────────────────────────────────────────
 
-MissionExecutiveNode::MissionExecutiveNode(const rclcpp::NodeOptions & options)
-: Node("mission_executive_node", options)
+MissionManagerNode::MissionManagerNode(const rclcpp::NodeOptions & options)
+: Node("mission_manager_node", options)
 {
   // Load room waypoints from parameters
   load_waypoints();
@@ -43,17 +43,17 @@ MissionExecutiveNode::MissionExecutiveNode(const rclcpp::NodeOptions & options)
   task_action_server_ = rclcpp_action::create_server<ExecuteTask>(
     this,
     "run_mission",
-    std::bind(&MissionExecutiveNode::handle_goal,     this,
+    std::bind(&MissionManagerNode::handle_goal,     this,
               std::placeholders::_1, std::placeholders::_2),
-    std::bind(&MissionExecutiveNode::handle_cancel,   this, std::placeholders::_1),
-    std::bind(&MissionExecutiveNode::handle_accepted, this, std::placeholders::_1));
+    std::bind(&MissionManagerNode::handle_cancel,   this, std::placeholders::_1),
+    std::bind(&MissionManagerNode::handle_accepted, this, std::placeholders::_1));
 
-  RCLCPP_INFO(get_logger(), "MissionExecutiveNode ready.");
+  RCLCPP_INFO(get_logger(), "MissionManagerNode ready.");
 }
 
 // ── Action server callbacks ────────────────────────────────────────────────────
 
-rclcpp_action::GoalResponse MissionExecutiveNode::handle_goal(
+rclcpp_action::GoalResponse MissionManagerNode::handle_goal(
   const rclcpp_action::GoalUUID & /*uuid*/,
   std::shared_ptr<const ExecuteTask::Goal> goal)
 {
@@ -66,7 +66,7 @@ rclcpp_action::GoalResponse MissionExecutiveNode::handle_goal(
   return rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE;
 }
 
-rclcpp_action::CancelResponse MissionExecutiveNode::handle_cancel(
+rclcpp_action::CancelResponse MissionManagerNode::handle_cancel(
   std::shared_ptr<rclcpp_action::ServerGoalHandle<ExecuteTask>> /*goal_handle*/)
 {
   RCLCPP_WARN(get_logger(), "Mission cancel requested.");
@@ -74,7 +74,7 @@ rclcpp_action::CancelResponse MissionExecutiveNode::handle_cancel(
   return rclcpp_action::CancelResponse::ACCEPT;
 }
 
-void MissionExecutiveNode::handle_accepted(
+void MissionManagerNode::handle_accepted(
   std::shared_ptr<rclcpp_action::ServerGoalHandle<ExecuteTask>> goal_handle)
 {
   std::thread{[this, goal_handle]() { run_mission(goal_handle); }}.detach();
@@ -82,16 +82,11 @@ void MissionExecutiveNode::handle_accepted(
 
 // ── Mission execution ──────────────────────────────────────────────────────────
 
-void MissionExecutiveNode::run_mission(
+void MissionManagerNode::run_mission(
   std::shared_ptr<rclcpp_action::ServerGoalHandle<ExecuteTask>> goal_handle)
 {
   auto feedback = std::make_shared<ExecuteTask::Feedback>();
   auto result   = std::make_shared<ExecuteTask::Result>();
-
-  // The task_command is expected to be embedded in the goal (set by task_planner).
-  // For now the goal carries only a text prompt; the task_command is resolved
-  // externally. TODO: wire task_planner output directly into this node.
-  // For the template, we use the task embedded in active_task_.
 
   auto publish_feedback = [&](const std::string & status) {
     feedback->status = status;
@@ -172,7 +167,7 @@ void MissionExecutiveNode::run_mission(
 
 // ── Step helpers ───────────────────────────────────────────────────────────────
 
-bool MissionExecutiveNode::navigate_to_room(int room_id)
+bool MissionManagerNode::navigate_to_room(int room_id)
 {
   auto it = room_waypoints_.find(room_id);
   if (it == room_waypoints_.end()) {
@@ -182,21 +177,20 @@ bool MissionExecutiveNode::navigate_to_room(int room_id)
   return navigate_to_pose(it->second);
 }
 
-bool MissionExecutiveNode::navigate_to_base()
+bool MissionManagerNode::navigate_to_base()
 {
   return navigate_to_pose(base_pose_);
 }
 
-bool MissionExecutiveNode::perceive_object(const std::string & /*object_name*/)
+bool MissionManagerNode::perceive_object(const std::string & /*object_name*/)
 {
   // TODO: send a goal to the ObjectDetectorNode action server
-  //       (amm_perception/DetectObject action — to be defined)
   // For the template this is a stub that always succeeds.
-  RCLCPP_INFO(get_logger(), "[STUB] perceive_object — implement with isaac_ros_grounding_dino.");
+  RCLCPP_INFO(get_logger(), "[STUB] perceive_object — implement with amm_perception.");
   return true;
 }
 
-bool MissionExecutiveNode::pick_object()
+bool MissionManagerNode::pick_object()
 {
   if (!pick_client_->wait_for_action_server(5s)) {
     RCLCPP_ERROR(get_logger(), "PickObject action server not available.");
@@ -233,7 +227,7 @@ bool MissionExecutiveNode::pick_object()
   return result_future.get().result->success;
 }
 
-bool MissionExecutiveNode::place_object()
+bool MissionManagerNode::place_object()
 {
   if (!place_client_->wait_for_action_server(5s)) {
     RCLCPP_ERROR(get_logger(), "PlaceObject action server not available.");
@@ -270,7 +264,7 @@ bool MissionExecutiveNode::place_object()
   return result_future.get().result->success;
 }
 
-bool MissionExecutiveNode::navigate_to_pose(
+bool MissionManagerNode::navigate_to_pose(
   const geometry_msgs::msg::PoseStamped & target_pose)
 {
   if (!nav_client_->wait_for_action_server(5s)) {
@@ -311,7 +305,7 @@ bool MissionExecutiveNode::navigate_to_pose(
 
 // ── Parameter helpers ──────────────────────────────────────────────────────────
 
-geometry_msgs::msg::PoseStamped MissionExecutiveNode::make_pose(
+geometry_msgs::msg::PoseStamped MissionManagerNode::make_pose(
   double x, double y, double z, double qw) const
 {
   geometry_msgs::msg::PoseStamped p;
@@ -326,7 +320,7 @@ geometry_msgs::msg::PoseStamped MissionExecutiveNode::make_pose(
   return p;
 }
 
-void MissionExecutiveNode::load_waypoints()
+void MissionManagerNode::load_waypoints()
 {
   // Declare parameters with default values (override in config/waypoints.yaml)
   declare_parameter("room1.x", 2.0); declare_parameter("room1.y",  0.0);
@@ -353,14 +347,14 @@ void MissionExecutiveNode::load_waypoints()
   RCLCPP_INFO(get_logger(), "Loaded waypoints for rooms 1-3 and base.");
 }
 
-}  // namespace amm_mission_executive
+}  // namespace amm_mission_manager
 
 // ── main ──────────────────────────────────────────────────────────────────────
 
 int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<amm_mission_executive::MissionExecutiveNode>());
+  rclcpp::spin(std::make_shared<amm_mission_manager::MissionManagerNode>());
   rclcpp::shutdown();
   return 0;
 }

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(amm_mission_executive)
+project(amm_mission_manager)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -15,11 +15,11 @@ find_package(nav2_msgs REQUIRED)
 
 include_directories(include)
 
-add_executable(mission_executive_node
-  src/mission_executive_node.cpp
+add_executable(mission_manager_node
+  src/mission_manager_node.cpp
 )
 
-ament_target_dependencies(mission_executive_node
+ament_target_dependencies(mission_manager_node
   rclcpp
   rclcpp_action
   amm_msgs
@@ -28,16 +28,12 @@ ament_target_dependencies(mission_executive_node
   nav2_msgs
 )
 
-install(TARGETS mission_executive_node
+install(TARGETS mission_manager_node
   DESTINATION lib/${PROJECT_NAME}
 )
 
 install(DIRECTORY include/
   DESTINATION include/
-)
-
-install(DIRECTORY config/
-  DESTINATION share/${PROJECT_NAME}/config
 )
 
 ament_package()

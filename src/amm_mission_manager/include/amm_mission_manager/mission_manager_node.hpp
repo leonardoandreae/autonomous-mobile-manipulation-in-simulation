@@ -1,5 +1,6 @@
 #pragma once
 
+#include <map>
 #include <memory>
 #include <string>
 
@@ -13,7 +14,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
 
-namespace amm_mission_executive
+namespace amm_mission_manager
 {
 
 // ── State machine states ───────────────────────────────────────────────────────
@@ -33,15 +34,15 @@ std::string to_string(MissionState s);
 
 // ── Node ───────────────────────────────────────────────────────────────────────
 
-class MissionExecutiveNode : public rclcpp::Node
+class MissionManagerNode : public rclcpp::Node
 {
 public:
-  using ExecuteTask   = amm_msgs::action::ExecuteTask;
-  using PickObject    = amm_msgs::action::PickObject;
-  using PlaceObject   = amm_msgs::action::PlaceObject;
+  using ExecuteTask    = amm_msgs::action::ExecuteTask;
+  using PickObject     = amm_msgs::action::PickObject;
+  using PlaceObject    = amm_msgs::action::PlaceObject;
   using NavigateToPose = nav2_msgs::action::NavigateToPose;
 
-  explicit MissionExecutiveNode(const rclcpp::NodeOptions & options = rclcpp::NodeOptions());
+  explicit MissionManagerNode(const rclcpp::NodeOptions & options = rclcpp::NodeOptions());
 
 private:
   // ── Action server (entry point) ──────────────────────────────────────────────
@@ -92,4 +93,4 @@ private:
     double x, double y, double z, double qw) const;
 };
 
-}  // namespace amm_mission_executive
+}  // namespace amm_mission_manager

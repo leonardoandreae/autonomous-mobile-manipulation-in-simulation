@@ -4,8 +4,9 @@
   <name>amm_perception</name>
   <version>0.1.0</version>
   <description>
-    Perception node — wraps isaac_ros_grounding_dino (open-vocabulary detection)
-    and isaac_ros_foundationpose (6-DoF pose estimation) to locate objects by name.
+    Perception node — locates objects by name and returns their 6-DoF pose.
+    Supports two backends: 'gazebo' (TF/model-state lookup, CPU-only) and
+    'isaac_sim' (grounding_dino + foundationpose vision pipeline, GPU).
   </description>
   <maintainer email="leoandreae@gmail.com">Leonardo Andreae</maintainer>
   <license>MIT</license>
@@ -18,8 +19,7 @@
   <depend>sensor_msgs</depend>
   <depend>geometry_msgs</depend>
   <depend>vision_msgs</depend>
-  <depend>cv_bridge</depend>
-  <depend>image_transport</depend>
+  <depend>tf2</depend>
   <depend>tf2_ros</depend>
   <depend>tf2_geometry_msgs</depend>
 
