@@ -1,1 +1,0 @@
-/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/amm_navigation_manager/ament_cmake_core/amm_navigation_managerConfig-version.cmake

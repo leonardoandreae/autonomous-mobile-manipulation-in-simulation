@@ -1,1 +1,0 @@
-/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/amm_msgs/rosidl_generator_cpp/amm_msgs/action/detail/pick_object__traits.hpp

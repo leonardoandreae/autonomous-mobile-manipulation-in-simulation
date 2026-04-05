@@ -1,8 +1,0 @@
-source;share/amm_manipulation/hook/cmake_prefix_path.ps1
-source;share/amm_manipulation/hook/cmake_prefix_path.dsv
-source;share/amm_manipulation/hook/cmake_prefix_path.sh
-source;share/amm_manipulation/local_setup.bash
-source;share/amm_manipulation/local_setup.dsv
-source;share/amm_manipulation/local_setup.ps1
-source;share/amm_manipulation/local_setup.sh
-source;share/amm_manipulation/local_setup.zsh

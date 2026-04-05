@@ -4,14 +4,10 @@
   ============================
   Combines the Clearpath Ridgeback omnidirectional mobile base with the
   Franka FR3 7-DoF arm mounted on the top plate.
+  All robot description files are self-contained within amm_description.
 
   Arguments:
     use_gazebo   (default false) — include Gazebo Harmonic plugins
-    sim_gazebo   (default false) — alias, same effect
-
-  Dependencies (must be installed / cloned into your workspace):
-    - ridgeback_description   (ros-jazzy-ridgeback-description or from source)
-    - franka_description      (from franka_ros2, Jazzy branch)
 
   Usage:
     ros2 launch amm_description description.launch.py
@@ -24,10 +20,10 @@
   <xacro:arg name="use_gazebo" default="false"/>
 
   <!-- ── Ridgeback base ──────────────────────────────────────────────────────── -->
-  <xacro:include filename="$(find ridgeback_description)/urdf/ridgeback.urdf.xacro"/>
+  <xacro:include filename="$(find amm_description)/urdf/ridgeback.urdf.xacro"/>
 
   <!-- ── Franka FR3 arm ─────────────────────────────────────────────────────── -->
-  <xacro:include filename="$(find franka_description)/robots/fr3/fr3.urdf.xacro"/>
+  <xacro:include filename="$(find amm_description)/robots/fr3/fr3.urdf.xacro"/>
 
   <!-- ── Mount the arm on the Ridgeback top plate ───────────────────────────── -->
   <!-- Connect the FR3's root link ("base") to the Ridgeback top plate.

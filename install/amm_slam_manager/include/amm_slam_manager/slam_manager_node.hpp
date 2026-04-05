@@ -1,1 +1,0 @@
-/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/src/amm_slam_manager/include/amm_slam_manager/slam_manager_node.hpp

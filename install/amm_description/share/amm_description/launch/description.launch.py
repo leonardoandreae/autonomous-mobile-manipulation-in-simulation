@@ -1,1 +1,0 @@
-/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/src/amm_description/launch/description.launch.py

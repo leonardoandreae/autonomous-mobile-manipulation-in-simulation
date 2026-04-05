@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>autonomous_mobile_manipulation</name>
+  <version>0.1.0</version>
+  <description>
+    Meta-package for the Autonomous Mobile Manipulation project.
+    Build only this package to build all AMM packages:
+      colcon build --packages-up-to autonomous_mobile_manipulation
+  </description>
+  <maintainer email="leoandreae@gmail.com">Leonardo Andreae</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>amm_msgs</depend>
+  <depend>amm_task_planner</depend>
+  <depend>amm_mission_manager</depend>
+  <depend>amm_navigation_manager</depend>
+  <depend>amm_perception</depend>
+  <depend>amm_manipulation</depend>
+  <depend>amm_slam_manager</depend>
+  <depend>amm_description</depend>
+  <depend>amm_gazebo</depend>
+  <depend>amm_bringup</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

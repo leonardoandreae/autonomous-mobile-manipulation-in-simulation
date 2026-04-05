@@ -1,1 +1,0 @@
-/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/src/amm_gazebo/launch/gazebo_sim.launch.py

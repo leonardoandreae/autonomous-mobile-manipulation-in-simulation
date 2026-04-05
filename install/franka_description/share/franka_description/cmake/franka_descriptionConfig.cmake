@@ -1,1 +1,0 @@
-/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/franka_description/ament_cmake_core/franka_descriptionConfig.cmake

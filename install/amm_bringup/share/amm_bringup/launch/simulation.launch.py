@@ -1,1 +1,0 @@
-/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/src/amm_bringup/launch/simulation.launch.py

@@ -1,1 +1,0 @@
-/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/src/franka_description/launch/visualize_franka_duo.launch.py

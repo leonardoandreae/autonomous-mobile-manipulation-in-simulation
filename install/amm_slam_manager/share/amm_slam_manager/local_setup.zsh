@@ -1,1 +1,0 @@
-/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/amm_slam_manager/ament_cmake_environment_hooks/local_setup.zsh

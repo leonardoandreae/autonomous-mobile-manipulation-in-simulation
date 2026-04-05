@@ -1,1 +1,0 @@
-/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/ridgeback_description/ament_cmake_core/ridgeback_descriptionConfig.cmake

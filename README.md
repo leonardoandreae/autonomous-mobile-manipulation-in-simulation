@@ -212,10 +212,11 @@ See the [Isaac ROS documentation](https://nvidia-isaac-ros.github.io) for instal
 
 ## Build
 
+All packages are symlinked into `~/ros2_ws/src/`. Build only the AMM project:
+
 ```bash
-cd ~/git/autonomous-mobile-manipulation-in-simulation
-colcon build --symlink-install
-source install/setup.bash
+cd ~/ros2_ws
+colcon build --packages-up-to autonomous_mobile_manipulation --symlink-install
 ```
 
 ---

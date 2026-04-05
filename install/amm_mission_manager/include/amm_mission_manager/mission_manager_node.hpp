@@ -1,1 +1,0 @@
-/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/src/amm_mission_manager/include/amm_mission_manager/mission_manager_node.hpp

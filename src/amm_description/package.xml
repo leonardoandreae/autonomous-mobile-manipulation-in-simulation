@@ -5,8 +5,7 @@
   <version>0.1.0</version>
   <description>
     Robot description for the Clearpath Ridgeback + Franka FR3 mobile manipulator.
-    The USD asset (ridgeback_franka.usd) is loaded directly in Isaac Sim.
-    This package provides the URDF/Xacro for ROS 2 tools (rviz2, MoveIt, tf2).
+    Self-contained: includes Ridgeback and FR3 xacros and meshes.
   </description>
   <maintainer email="leoandreae@gmail.com">Leonardo Andreae</maintainer>
   <license>MIT</license>
@@ -16,8 +15,6 @@
   <depend>robot_state_publisher</depend>
   <depend>joint_state_publisher</depend>
   <depend>xacro</depend>
-  <depend>ridgeback_description</depend>
-  <depend>franka_description</depend>
 
   <export>
     <build_type>ament_cmake</build_type>

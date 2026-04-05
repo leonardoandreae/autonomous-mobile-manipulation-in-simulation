@@ -1,1 +1,0 @@
-/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/amm_msgs/rosidl_typesupport_introspection_c/amm_msgs/action/detail/execute_task__rosidl_typesupport_introspection_c.h

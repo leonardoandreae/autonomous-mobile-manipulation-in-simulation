@@ -1,1 +1,0 @@
-/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/amm_msgs/rosidl_typesupport_fastrtps_c/amm_msgs/msg/detail/task_command__rosidl_typesupport_fastrtps_c.h

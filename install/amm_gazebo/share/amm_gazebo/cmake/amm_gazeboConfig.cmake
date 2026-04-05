@@ -1,1 +1,0 @@
-/home/leonardo/git/autonomous-mobile-manipulation-in-simulation/build/amm_gazebo/ament_cmake_core/amm_gazeboConfig.cmake
