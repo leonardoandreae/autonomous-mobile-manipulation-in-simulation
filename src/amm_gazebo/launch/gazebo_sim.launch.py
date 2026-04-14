@@ -20,6 +20,7 @@ from launch.actions import (
     DeclareLaunchArgument,
     IncludeLaunchDescription,
     LogInfo,
+    SetEnvironmentVariable,
 )
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command, LaunchConfiguration, PathJoinSubstitution
@@ -48,6 +49,17 @@ def generate_launch_description():
     # ── Paths ─────────────────────────────────────────────────────────────────
     gazebo_share = get_package_share_directory("amm_gazebo")
     desc_share   = get_package_share_directory("amm_description")
+
+    # ── Gazebo resource path — lets Gazebo resolve model://amm_description/... ─
+    # URDF→SDF conversion rewrites package:// URIs to model://<pkg>/<path>.
+    # Gazebo searches GZ_SIM_RESOURCE_PATH for a directory named <pkg>.
+    # get_package_share_directory returns .../share/amm_description;
+    # its parent (.../share) contains the amm_description/ subfolder Gazebo needs.
+    gz_resource_path = SetEnvironmentVariable(
+        name="GZ_SIM_RESOURCE_PATH",
+        value=os.path.dirname(desc_share)
+              + ":" + os.environ.get("GZ_SIM_RESOURCE_PATH", ""),
+    )
 
     world_file = os.path.join(gazebo_share, "worlds", "three_room.sdf")
     bridge_cfg = os.path.join(gazebo_share, "config", "ros_gz_bridge.yaml")
@@ -121,7 +133,33 @@ def generate_launch_description():
         }],
     )
 
+    # ── ros2_control controller spawners ──────────────────────────────────────
+    # Spawned after the robot is created in Gazebo so that gz_ros2_control
+    # has already loaded the hardware interface.
+    spawn_jsb = Node(
+        package="controller_manager",
+        executable="spawner",
+        name="spawner_joint_state_broadcaster",
+        arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
+        output="screen",
+    )
+    spawn_arm = Node(
+        package="controller_manager",
+        executable="spawner",
+        name="spawner_fr3_arm_controller",
+        arguments=["fr3_arm_controller", "--controller-manager", "/controller_manager"],
+        output="screen",
+    )
+    spawn_gripper = Node(
+        package="controller_manager",
+        executable="spawner",
+        name="spawner_fr3_gripper_controller",
+        arguments=["fr3_gripper_controller", "--controller-manager", "/controller_manager"],
+        output="screen",
+    )
+
     return LaunchDescription([
+        gz_resource_path,
         declare_use_sim_time,
         declare_gui,
         LogInfo(msg="=== AMM Gazebo Harmonic Simulation ==="),
@@ -129,4 +167,7 @@ def generate_launch_description():
         robot_state_publisher,
         spawn_robot,
         bridge,
+        spawn_jsb,
+        spawn_arm,
+        spawn_gripper,
     ])

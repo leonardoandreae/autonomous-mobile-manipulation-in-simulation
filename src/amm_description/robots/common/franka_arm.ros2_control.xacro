@@ -109,7 +109,10 @@
     <xacro:if value="${gazebo}">
       <gazebo>
         <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
-          <parameters>$(find franka_gazebo_bringup)/config/franka_gazebo_controllers.yaml</parameters>
+          <parameters>$(find amm_bringup)/config/controllers.yaml</parameters>
+          <!-- Note: this block is only reached if ros2_control:=true is passed
+               directly to fr3.urdf.xacro, which is NOT done in the AMM bringup.
+               The AMM bringup uses the ros2_control block in ridgeback_franka.urdf.xacro. -->
         </plugin>
       </gazebo>
     </xacro:if>
