@@ -66,9 +66,6 @@ def generate_launch_description():
     urdf_xacro = os.path.join(desc_share,   "urdf",   "ridgeback_franka.urdf.xacro")
 
     # ── Process xacro → URDF string at launch time ───────────────────────────
-    # xacro cannot be parsed by Gazebo directly; we pre-process it here so that
-    # robot_state_publisher gets a plain URDF string, and the spawner reads
-    # it from the /robot_description topic.
     robot_description = ParameterValue(
         Command(["xacro ", urdf_xacro, " use_gazebo:=true"]),
         value_type=str,
@@ -89,21 +86,19 @@ def generate_launch_description():
         }.items(),
     )
 
-    # ── robot_state_publisher — publishes processed URDF to /robot_description
+    # ── robot_state_publisher ─────────────────────────────────────────────────
     robot_state_publisher = Node(
         package="robot_state_publisher",
         executable="robot_state_publisher",
         name="robot_state_publisher",
         output="screen",
         parameters=[{
-            "use_sim_time":       use_sim_time,
-            "robot_description":  robot_description,
+            "use_sim_time":      use_sim_time,
+            "robot_description": robot_description,
         }],
     )
 
-    # ── Spawn robot into Gazebo from the /robot_description topic ─────────────
-    # ros_gz_sim's 'create' executable reads the URDF from the ROS topic so
-    # Gazebo never has to parse xacro syntax.
+    # ── Spawn robot into Gazebo from /robot_description topic ─────────────────
     spawn_robot = Node(
         package="ros_gz_sim",
         executable="create",
@@ -133,30 +128,10 @@ def generate_launch_description():
         }],
     )
 
-    # ── ros2_control controller spawners ──────────────────────────────────────
-    # Spawned after the robot is created in Gazebo so that gz_ros2_control
-    # has already loaded the hardware interface.
-    spawn_jsb = Node(
-        package="controller_manager",
-        executable="spawner",
-        name="spawner_joint_state_broadcaster",
-        arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
-        output="screen",
-    )
-    spawn_arm = Node(
-        package="controller_manager",
-        executable="spawner",
-        name="spawner_fr3_arm_controller",
-        arguments=["fr3_arm_controller", "--controller-manager", "/controller_manager"],
-        output="screen",
-    )
-    spawn_gripper = Node(
-        package="controller_manager",
-        executable="spawner",
-        name="spawner_fr3_gripper_controller",
-        arguments=["fr3_gripper_controller", "--controller-manager", "/controller_manager"],
-        output="screen",
-    )
+    # NOTE: Controller spawners removed — gz_ros2_control auto-loads and
+    # activates all controllers whose types are declared in controllers.yaml.
+    # Spawners running after auto-activation would find controllers already
+    # active and fail trying to reconfigure them, producing spurious errors.
 
     return LaunchDescription([
         gz_resource_path,
@@ -167,7 +142,4 @@ def generate_launch_description():
         robot_state_publisher,
         spawn_robot,
         bridge,
-        spawn_jsb,
-        spawn_arm,
-        spawn_gripper,
     ])

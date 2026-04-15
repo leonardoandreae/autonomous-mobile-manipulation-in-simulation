@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xacro /home/leonardo/ros2_ws/install/amm_description/share/amm_description/urdf/ridgeback_franka.urdf.xacro use_gazebo:=true)"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 controller_manager:
   ros__parameters:
-    update_rate: 1000  # Hz
+    update_rate: 500  # Hz
 
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
@@ -29,10 +29,12 @@ fr3_arm_controller:
     state_publish_rate: 100.0
     action_monitor_rate: 20.0
     allow_partial_joints_goal: false
+    open_loop_control: true
 
 fr3_gripper_controller:
   ros__parameters:
     joint: fr3_finger_joint1
+    parallel_joints: [fr3_finger_joint2]
     action_monitor_rate: 20.0
     allow_stalling: false
     stall_velocity_threshold: 0.001

@@ -16,7 +16,7 @@
 
 # ── Odometry ──────────────────────────────────────────────────────────────────
 - ros_topic_name: /odom
-  gz_topic_name: /model/ridgeback_franka/odometry
+  gz_topic_name: /model/ridgeback_franka/odom
   ros_type_name: nav_msgs/msg/Odometry
   gz_type_name: gz.msgs.Odometry
   direction: GZ_TO_ROS

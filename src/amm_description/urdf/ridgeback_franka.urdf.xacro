@@ -33,7 +33,7 @@
   <joint name="ridgeback_to_fr3" type="fixed">
     <parent link="mid_mount"/>
     <child  link="base"/>
-    <origin xyz="0.0 0.0 0.05" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
   </joint>
 
   <!-- ── Franka Hand (parallel gripper) ────────────────────────────────────── -->
@@ -111,11 +111,10 @@
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
       </joint>
-      <!-- fr3_finger_joint2 is a mimic of finger_joint1 — no command interfaces allowed -->
+      <!-- fr3_finger_joint2 mirrors finger_joint1 — commanded in sync by the gripper controller -->
       <joint name="fr3_finger_joint2">
-        <param name="mimic">fr3_finger_joint1</param>
-        <param name="mechanically_reduced">1</param>
-        <state_interface name="position"/>
+        <command_interface name="position"/>
+        <state_interface name="position"><param name="initial_value">0.0</param></state_interface>
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
       </joint>
@@ -152,6 +151,7 @@
         <max_acceleration>5</max_acceleration>
         <topic>cmd_vel</topic>
         <odom_topic>odom</odom_topic>
+        <tf_topic>/tf</tf_topic>
         <frame_id>odom</frame_id>
         <child_frame_id>base_link</child_frame_id>
         <odom_publish_frequency>50</odom_publish_frequency>
